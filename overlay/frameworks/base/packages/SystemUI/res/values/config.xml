@@ -26,6 +26,10 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <resources>
+     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+          vibrator is capable of subtle vibrations -->
+     <bool name="config_vibrateOnIconAnimation">true</bool>
+
     <!-- Doze: does this device support STATE_DOZE?
          The display is dozing in a low power state; it is still on but is
          optimized for showing system-provided content while the device is
