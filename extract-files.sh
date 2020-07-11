@@ -63,6 +63,9 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
+	vendor/lib/libaudioproxy.so)
+	    "${PATCHELF}" --add-needed libaudioproxy_shim.so "${2}"
+            ;;
     esac
 }
 
