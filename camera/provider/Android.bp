@@ -1,3 +1,19 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+
 soong_config_module_type {
     name: "exynos9611_model",
     module_type: "cc_defaults",
@@ -15,23 +31,26 @@ exynos9611_model {
     },
 }
 
-cc_defaults {
-    name: "samsung_camera_service_2_5_defaults",
+cc_binary {
+    name: "android.hardware.camera.provider@2.6-service_64.samsung",
     defaults: [
         "hidl_defaults",
         "exynos9611_model_defaults",
     ],
+    compile_multilib: "64",
     proprietary: true,
     relative_install_path: "hw",
     srcs: [
         "SamsungCameraProvider.cpp",
         "service.cpp"
     ],
+    init_rc: ["android.hardware.camera.provider@2.6-service_64.samsung.rc"],
     shared_libs: [
         "android.hardware.camera.provider@2.4",
         "android.hardware.camera.provider@2.4-legacy",
         "android.hardware.camera.provider@2.5",
         "android.hardware.camera.provider@2.5-legacy",
+        "android.hardware.camera.provider@2.6",
         "libbinder",
         "libcamera_metadata",
         "libcutils",
@@ -43,18 +62,4 @@ cc_defaults {
     static_libs: [
         "android.hardware.camera.common@1.0-helper",
     ],
-}
-
-cc_binary {
-    name: "android.hardware.camera.provider@2.5-service.samsung",
-    defaults: ["samsung_camera_service_2_5_defaults"],
-    compile_multilib: "32",
-    init_rc: ["android.hardware.camera.provider@2.5-service.samsung.rc"],
-}
-
-cc_binary {
-    name: "android.hardware.camera.provider@2.5-service_64.samsung",
-    defaults: ["samsung_camera_service_2_5_defaults"],
-    compile_multilib: "64",
-    init_rc: ["android.hardware.camera.provider@2.5-service_64.samsung.rc"],
 }
