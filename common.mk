@@ -53,6 +53,9 @@ PRODUCT_PACKAGES += \
 else
 PRODUCT_PACKAGES += \
      android.hardware.biometrics.fingerprint@2.3-service.samsung
+
+PRODUCT_COPY_FILES += \
+     $(COMMON_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
 endif
 
 # Bluetooth
@@ -203,6 +206,10 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-lineage
+ifneq ($(TARGET_HAS_FOD),true)
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-nofod
+endif
+
 PRODUCT_ENFORCE_RRO_TARGETS += framework-res SystemUI SettingsProvider CarrierConfig
 
 # Permissions
