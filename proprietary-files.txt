@@ -254,8 +254,6 @@ vendor/lib/liboemcrypto.so
 vendor/lib/libwvhidl.so
 
 ## Wi-Fi
-vendor/bin/hw/macloader
-vendor/bin/wlbtd
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_slsi.rc
 vendor/etc/wifi/hydra_config.sdb
