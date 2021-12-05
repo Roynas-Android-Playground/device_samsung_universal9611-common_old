@@ -1,13 +1,10 @@
-# Common proprietary files - from Samsung package version P610XXU2DUJ1, unless pinned
+# Common proprietary files - from Samsung package version M307FXXU4CUI1, unless pinned
 
 ## Audio
 vendor/etc/default_volume_tables.xml
 vendor/etc/dolby/dax-default.xml
-vendor/etc/mixer_gains_cs47l15.xml
 vendor/etc/mixer_paths.xml
-vendor/etc/mixer_paths_cs47l15.xml
 vendor/etc/usb_audio_policy_configuration.xml
-vendor/lib/hw/sound_trigger.primary.universal9611.so
 vendor/lib/vndk/libtinyalsa.so
 vendor/lib/vndk/libaudioroute.so
 vendor/lib/libsamsungDiamondVoice.so
@@ -39,14 +36,11 @@ vendor/firmware/calliope_iva.bin
 vendor/firmware/dax_param.bin
 
 ## Bluetooth
-# Bluetooth (aptX) - from crosshatch - QP1A.190711.020
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+system/lib64/libaptX_encoder.so
 
 ## Camera
 vendor/lib/hw/camera.exynos9611.so
-vendor/lib/libexynoscamera_plugin.so
 vendor/lib64/hw/camera.exynos9611.so
-vendor/lib64/libexynoscamera_plugin.so
 
 ## Camera dependencies
 vendor/lib/libSEF.quram.so
@@ -78,17 +72,17 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/firmware/CC_DRAM_CODE_FLASH.bin
 vendor/firmware/CC_DTCM_CODE_FLASH.bin
 vendor/firmware/CC_ITCM_CODE_FLASH.bin
-vendor/firmware/dbmd8_va_asrp_fw.bin
-vendor/firmware/dbmd8_va_fw.bin
+vendor/firmware/rtdsp.bin
+vendor/firmware/rtdsp_param.bin
+vendor/firmware/setfile_3p8sp.bin
+vendor/firmware/setfile_gc5035.bin
+vendor/firmware/setfile_gm2.bin
 vendor/firmware/kernel_bin_enf.bin
 vendor/firmware/kernel_bin_inception.bin
 vendor/firmware/kernel_bin_mfb.bin
 vendor/firmware/kernel_bin_mobile_vgg.bin
 vendor/firmware/kernel_bin_nfd.bin
-vendor/firmware/param_ti.bin
 vendor/firmware/setfile_4ha.bin
-vendor/firmware/setfile_5e9.bin
-vendor/firmware/spkamp.bin
 
 ## Gatekeeper
 vendor/lib/hw/gatekeeper.exynos9611.so
@@ -195,17 +189,17 @@ vendor/lib64/libuuid.so
 
 ## TEEGRIS Firmware
 vendor/tee/00000000-0000-0000-0000-000000010081
-vendor/tee/00000000-0000-0000-0000-000000020081
-vendor/tee/00000000-0000-0000-0000-000046495645
-vendor/tee/00000000-0000-0000-0000-0050524f4341
-vendor/tee/00000000-0000-0000-0000-00535453540c
-vendor/tee/00000000-0000-0000-0000-00575644524d
-vendor/tee/00000000-0000-0000-0000-446e6c6f6164
-vendor/tee/00000000-0000-0000-0000-474154454b45
+vendor/tee/00000000-0000-0000-0000-4b45594d5354
+vendor/tee/00000000-0000-0000-0000-000000020081  
+vendor/tee/00000000-0000-0000-0000-505256544545
+vendor/tee/00000000-0000-0000-0000-000000534b4d  
 vendor/tee/00000000-0000-0000-0000-564c544b5052
+vendor/tee/00000000-0000-0000-0000-00535453540c  
 vendor/tee/00000000-0000-0000-0000-656e676d6f64
-vendor/tee/00000000-0000-0000-0000-657365636f6d
+vendor/tee/00000000-0000-0000-0000-00575644524d  
 vendor/tee/00000000-0000-0000-0000-6d73745f5441
+vendor/tee/00000000-0000-0000-0000-46494e474552  
+vendor/tee/00000000-0000-0000-0000-474154454b45  
 vendor/tee/driver/00000000-0000-0000-0000-00535453540b
 vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
 vendor/tee/driver/00000000-0000-0000-0000-564c544b4456

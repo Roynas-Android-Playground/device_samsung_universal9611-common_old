@@ -20,7 +20,7 @@
         "target_path": "hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib"
     },
     {
-        "repository": "android_kernel_samsung_gta4xl",
-        "target_path": "kernel/samsung/gta4xl"
+        "repository": "android_kernel_samsung_m30s-common",
+        "target_path": "kernel/samsung/m30s-common"
     }
 ]
