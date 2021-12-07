@@ -87,6 +87,9 @@
         <item>lte:2097152,4194304,8388608,1048576,3145728,4194304</item>
     </string-array>
 
+    <!-- FP trustlet limits the number to 4. -->
+    <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
+    
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">1.android.pool.ntp.org</string>
 
