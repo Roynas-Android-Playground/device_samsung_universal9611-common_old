@@ -19,6 +19,8 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(filter m307f, $(TARGET_DEVICE)),)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
+include $(COMMON_PATH)/AndroidBoard.mk
+
 include $(CLEAR_VARS)
 
 EGL_LIBS := libGLES_mali.so libOpenCL.so libOpenCL.so.1 libOpenCL.so.1.1 hw/vulkan.universal9611.so
