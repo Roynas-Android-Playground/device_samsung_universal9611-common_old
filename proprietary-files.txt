@@ -74,6 +74,13 @@ vendor/lib64/libsensorlistener.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 
+# Remosaic Daemon
+vendor/lib/libremosaic_daemon.so
+vendor/lib/libremosaiclib_s5k3p8sp.so
+vendor/lib64/libremosaic_daemon.so
+vendor/lib64/libremosaiclib_s5kgm2.so
+vendor/lib64/libremosaiclib_s5k3p8sp.so
+
 ## Charger Firmware
 vendor/firmware/mfc_fw.bin
 
