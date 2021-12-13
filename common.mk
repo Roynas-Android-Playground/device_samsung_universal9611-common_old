@@ -19,8 +19,6 @@ COMMON_PATH := device/samsung/m30s-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/m30s-common/m30s-common-vendor.mk)
 
-PRODUCT_CHARACTERISTICS := tablet
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl:32 \
