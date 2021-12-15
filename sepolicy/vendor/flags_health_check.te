@@ -1,0 +1,14 @@
+# flags_health_check.te
+
+get_prop(flags_health_check, adbd_config_prop)
+get_prop(flags_health_check, adbd_config_prop)
+get_prop(flags_health_check, apexd_prop)
+get_prop(flags_health_check, bluetooth_a2dp_offload_prop)
+get_prop(flags_health_check, bluetooth_prop)
+get_prop(flags_health_check, bpf_progs_loaded_prop)
+get_prop(flags_health_check, charger_prop)
+get_prop(flags_health_check, ctl_interface_restart_prop)
+get_prop(flags_health_check, device_logging_prop)
+get_prop(flags_health_check, exported_audio_prop)
+get_prop(flags_health_check, exported_bluetooth_prop)
+get_prop(flags_health_check, exported_wifi_prop)

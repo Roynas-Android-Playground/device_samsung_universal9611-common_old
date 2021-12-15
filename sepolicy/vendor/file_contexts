@@ -4,6 +4,7 @@
 /data/vendor/media(/.*)?                     u:object_r:media_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
 /data/camera(/.*)?                           u:object_r:camera_data_file:s0
+/data/exynos(/.*)?			     u:object_r:exynos_data_file:s0
 
 ## Devices
 /dev/block/platform/.+/by-name/cpefs         u:object_r:cpefs_block_device:s0
@@ -53,6 +54,7 @@
 /sys/devices/platform/13550000.dwmmc2/mmc_host/mmc0/mmc0:aaaa/block/mmcblk0/queue/scheduler     u:object_r:sysfs_io_sched_tuneable:s0
 
 # Camera
+/sys/devices/virtual/camera/flash/rear_flash                  u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera/rear/fw_update                    u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera/rear/ssrm_camera_info             u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
@@ -70,6 +72,9 @@
 # GPS
 /sys/devices/soc0/machine                                     u:object_r:sysfs_sec_gps:s0
 /sys/devices/soc0/revision                                    u:object_r:sysfs_sec_gps:s0
+
+## System
+/system/bin/clean_scratch_files                               u:object_r:clean_scratch_files_exec:s0
 
 ## Vendor
 /(vendor|system/vendor)/bin/wlbtd            u:object_r:wlbtd_exec:s0
