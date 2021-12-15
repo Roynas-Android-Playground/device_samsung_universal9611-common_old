@@ -381,4 +381,7 @@
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+    
+    <!-- Minimum screen brightness that can be set to the display -->    
+    <integer name="config_screenBrightnessSettingMinimum">1</integer>
 </resources>
