@@ -74,6 +74,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl
 
+# DOZE
+PRODUCT_PACKAGES += \
+    SamsungDoze
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
