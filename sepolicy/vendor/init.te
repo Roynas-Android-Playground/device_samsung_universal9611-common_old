@@ -6,3 +6,5 @@ allow init tmpfs:lnk_file create;
 allow init kernel:system module_request;
 
 allow init socket_device:sock_file { create setattr unlink };
+
+allow init vendor_block_device:lnk_file { relabelto };

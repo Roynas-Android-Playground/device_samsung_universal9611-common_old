@@ -8,6 +8,9 @@
 
 ## Devices
 /dev/block/platform/.+/by-name/cpefs         u:object_r:cpefs_block_device:s0
+/dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
+/dev/block/platform/.+/by-name/system        u:object_r:system_block_device:s0
+/dev/block/platform/.+/by-name/vendor        u:object_r:vendor_block_device:s0
 
 # Bluetooth
 /dev/scsc_h4_0                               u:object_r:bt_device:s0
