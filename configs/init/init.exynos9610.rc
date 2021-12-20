@@ -1,4 +1,3 @@
-import /vendor/etc/init/hw/init.exynos9611.root.rc
 
 on early-init
     mkdir /mnt/vendor/efs 0771 radio system
@@ -113,7 +112,7 @@ on init
     chmod 0664 /dev/cluster1_freq_max
     chmod 0664 /dev/cpu_dma_latency
     chmod 0664 /dev/stune/top-app/schedtune.boost
-    
+     
     #sensor
     chmod 0664 /dev/nanohub
     chmod 0664 /dev/nanohub_comms
@@ -154,6 +153,13 @@ on post-fs-data
     chmod 0644 /dev/freezer/frozen/freezer.state
     chmod 0644 /dev/freezer/thaw/tasks
     chmod 0644 /dev/freezer/thaw/cgroup.procs
+
+# Samsung Pay
+    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay
+
+# MST/NFC Switch
+    chown vendor_spay system /dev/mst_ctrl
+    chmod 0660 /dev/mst_ctrl
 
 # OLAF setup
     mkdir /dev/freezer/olaf
@@ -203,7 +209,7 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 # swap
-    swapon_all /vendor/etc/fstab.exynos9611
+    swapon_all /vendor/etc/fstab.exynos9611 
     
 # SensorHub Log folder
     mkdir /data/vendor/sensorhub/ 0771 root system
@@ -238,6 +244,7 @@ on post-fs-data
     chown system system /sys/class/camera/front/front_hwparam
     chown cameraserver cameraserver /sys/class/camera/front/front_sensorid_exif
     chown cameraserver cameraserver /sys/class/camera/front/front_sensorid
+    chown cameraserver cameraserver /sys/class/camera/front/front_xtalkcal
     chown system radio /sys/class/camera/rear/supported_cameraIds
 
     chown system radio /sys/class/camera/flash/rear_flash
@@ -299,7 +306,7 @@ on post-fs-data
     chown wifi root /mnt/vendor/efs/wifi/.mac.cob
     chmod 0664 /mnt/vendor/efs/wifi/.mac.cob
 
-    # write /sys/module/scsc_mx/parameters/disable_recovery_handling 0
+    #write /sys/module/scsc_mx/parameters/disable_recovery_handling 0
 
 # Samsung Pay
 #    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay
@@ -309,6 +316,16 @@ on post-fs-data
 #    chmod 0660 /dev/mst_ctrl
 
 on boot
+# SDHMS Slowdown : Cpuset
+    mkdir /dev/cpuset/abnormal
+    write /dev/cpuset/abnormal/cpus 0-3
+    copy /dev/cpuset/mems /dev/cpuset/abnormal/mems
+    chown system system /dev/cpuset/abnormal
+    chown system system /dev/cpuset/abnormal/tasks
+    chown system system /dev/cpuset/abnormal/cpus
+    chmod 0664 /dev/cpuset/abnormal/tasks
+    chmod 0664 /dev/cpuset/abnormal/cpus
+
 # SSWAP
     write /proc/sys/vm/swappiness 130
 
@@ -360,14 +377,48 @@ on boot
     chown audioserver system /sys/devices/platform/14a50000.abox/0.abox_debug/calliope_dram
     chown audioserver system /sys/kernel/debug/abox/log-00
 
-# SDHMS Slowdown : Cpuset
+# BarTender
+    mkdir /dev/cpuctl/bg_cached
+    chown system system /dev/cpuctl/bg_cached/tasks
+    chown system system /dev/cpuctl/bg_cached/cpu.cfs_period_us
+    chown system system /dev/cpuctl/bg_cached/cpu.cfs_quota_us
+    chmod 0666 /dev/cpuctl/bg_cached/tasks
+    chmod 0664 /dev/cpuctl/bg_cached/cpu.cfs_period_us
+    chmod 0664 /dev/cpuctl/bg_cached/cpu.cfs_quota_us
+    write /dev/cpuctl/bg_cached/cpu.rt_runtime_us 950000
+    write /dev/cpuctl/bg_cached/cpu.rt_period_us 1000000
+    write /dev/cpuctl/bg_cached/cpu.cfs_period_us 20000
+    write /dev/cpuctl/bg_cached/cpu.cfs_quota_us 10000
+
+    mkdir /dev/cpuctl/bg_abnormal
+    chown system system /dev/cpuctl/bg_abnormal/tasks
+    chown system system /dev/cpuctl/bg_abnormal/cpu.cfs_period_us
+    chown system system /dev/cpuctl/bg_abnormal/cpu.cfs_quota_us
+    chmod 0666 /dev/cpuctl/bg_abnormal/tasks
+    chmod 0664 /dev/cpuctl/bg_abnormal/cpu.cfs_period_us
+    chmod 0664 /dev/cpuctl/bg_abnormal/cpu.cfs_quota_us
+    write /dev/cpuctl/bg_abnormal/cpu.rt_runtime_us 950000
+    write /dev/cpuctl/bg_abnormal/cpu.rt_period_us 1000000
+    write /dev/cpuctl/bg_abnormal/cpu.cfs_period_us 20000
+    write /dev/cpuctl/bg_abnormal/cpu.cfs_quota_us 10000
+
+    mkdir /dev/cpuset/cached
+    write /dev/cpuset/cached/cpus 0-3
+    copy /dev/cpuset/mems /dev/cpuset/cached/mems
     mkdir /dev/cpuset/abnormal
     write /dev/cpuset/abnormal/cpus 0-3
     copy /dev/cpuset/mems /dev/cpuset/abnormal/mems
+
+    # change permissions for BarTender's cpusets we'll touch at runtime
+    chown system system /dev/cpuset/cached
     chown system system /dev/cpuset/abnormal
+    chown system system /dev/cpuset/cached/tasks
     chown system system /dev/cpuset/abnormal/tasks
+    chown system system /dev/cpuset/cached/cpus
     chown system system /dev/cpuset/abnormal/cpus
+    chmod 0664 /dev/cpuset/cached/tasks
     chmod 0664 /dev/cpuset/abnormal/tasks
+    chmod 0664 /dev/cpuset/cached/cpus
     chmod 0664 /dev/cpuset/abnormal/cpus
 
 #Performance
@@ -397,7 +448,7 @@ on boot
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
-    
+
     # Cstate node
     chown radio system /sys/module/cpuidle/parameters/off
     chmod 0664 /sys/module/cpuidle/parameters/off
@@ -458,19 +509,21 @@ on boot
     chmod 0660 /sys/class/sec/switch/uart_sel
     chown system system /sys/class/sec/switch/uart_sel
 
-on late-fs
-    wait_for_prop hwservicemanager.ready true
-    mount_all /vendor/etc/fstab.exynos9611 --late
+on late-fs 
+    wait_for_prop hwservicemanager.ready true 
+    mount_all /vendor/etc/fstab.exynos9610 --late 
 
 on fs
-    mount_all /vendor/etc/fstab.exynos9611 --early
+    mount_all /vendor/etc/fstab.exynos9610 --early
     # We need to seperate mounting SEC_EFS partition from fstab file due to GSI image loading case
     wait /dev/block/platform/13520000.ufs/by-name/sec_efs
     mount ext4 /dev/block/platform/13520000.ufs/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
+    setprop ro.crypto.fuse_sdcard true
 
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
     restorecon_recursive /mnt/vendor/persist
+    restorecon_recursive /data
 
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
@@ -495,11 +548,6 @@ on fs
 # Permissions for backlight
     chown system system /sys/class/backlight/panel/brightness
 
-# Permissions for LCD HMT
-    chown system system /sys/class/lcd/panel/hmt_on
-    chown system system /sys/class/lcd/panel/hmt_bright
-    chown system system /sys/class/mdnie/mdnie/hmt_color_temperature
-
 # Permissions for LCD
     chown system radio /sys/class/lcd/panel/manufacture_code
     chown system radio /sys/class/lcd/panel/lcd_type
@@ -515,8 +563,6 @@ on fs
     chown system radio /sys/class/lcd/panel/enable_fd
     chown system system /sys/class/lcd/panel/mask_brightness
     chown system system /sys/class/lcd/panel/actual_mask_brightness
-    chown system system /sys/class/lcd/panel/brt_avg
-    chown system system /sys/class/lcd/panel/cell_id
 
 # Permissions for LCD POC
     chown system system /sys/class/lcd/panel/poc
@@ -526,10 +572,13 @@ on fs
 # Permissions for MDNIE
     chown system media_rw /sys/class/mdnie/mdnie/mode
     chown system media_rw /sys/class/mdnie/mdnie/scenario
-    chown system system /sys/class/mdnie/mdnie/mdnie_ldu
-    chown system system /sys/class/mdnie/mdnie/night_mode
+    chown system system /sys/class/mdnie/mdnie/accessibility
+    chown system system /sys/class/mdnie/mdnie/sensorRGB
     chown system system /sys/class/mdnie/mdnie/whiteRGB
+    chown system system /sys/class/mdnie/mdnie/night_mode
     chown system system /sys/class/mdnie/mdnie/light_notification
+    chown system system /sys/class/mdnie/mdnie/color_lens
+    chown system system /sys/class/mdnie/mdnie/bypass
 
 # Sensors permissions
 # Permissions for Fingerprint sensor
@@ -621,9 +670,9 @@ on fs
     chown system radio /sys/class/sensors/ssp_sensor/mcu_update
     chown system radio /sys/class/sensors/ssp_sensor/mcu_sleep_test
     chown system radio /sys/class/sensors/ssp_sensor/sensor_dump
-    chown system radio /sys/class/sensors/ssp_sensor/hall_ic
     chown system radio /sys/class/sensors/ssp_sensor/sensor_spec
     chown system radio /sys/class/sensors/ssp_sensor/scontext_list
+    chown system radio /sys/class/sensors/ssp_sensor/hall_ic
 
 # Sensorhub IIO
     chown system radio /sys/class/sensors/ssp_sensor/ssp_flush
@@ -633,10 +682,10 @@ on fs
 
 # Meta event
     chown system radio /sys/class/sensors/sensor_dev/flush
-
+	
 # Permissions for  LSI NFC
-    chmod 0660 /dev/sec-nfc
-    chown nfc nfc /dev/sec-nfc
+#    chmod 0660 /dev/sec-nfc
+#    chown nfc nfc /dev/sec-nfc
 
 # Diag-daemon
     mkdir /efs/cpdebug 0771 radio system
@@ -673,36 +722,36 @@ on fs
     chmod 0660 /sys/class/dp_sec/dp_drm
     chown system system /sys/class/dp_sec/dp_drm
 
+# Copy DRM Key
+#    copy /system/app/wv.keys /factory/wv.keys
+
+# Permission for DRM Key
+#    chmod 0644 /factory/wv.keys
+
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
     chown system radio /sys/class/audio/earjack/key_state
     chown system radio /sys/class/audio/earjack/state
     chown system radio /sys/class/audio/earjack/mic_adc
-    chown system radio /sys/class/audio/earjack/force_enable_antenna
 
-    chown system audio /sys/class/richtek_spm/rt_amp0/rspk
-    chown system audio /sys/class/richtek_spm/rt_amp0/t0
-    chown system audio /sys/class/richtek_spm/rt_amp0/monitor_on
-    chown system audio /sys/class/richtek_spm/trigger
-    chown system audio /sys/class/richtek_spm/status
+    chown system audio /sys/class/nxp/tfa_cal/status
+    chown system audio /sys/class/nxp/tfa_cal/rdc
+    chown system audio /sys/class/nxp/tfa_cal/temp
 
-    mkdir /efs/richtek 0770 system audio
-    mkdir /efs/richtek/rt_amp0 0770 system audio
-    chown system audio /efs/richtek/rt_amp0/rdc_cal
-    chmod 0660 /efs/richtek/rt_amp0/rdc_cal
+    mkdir /efs/nxp 0770 system audio
+    chown system audio /efs/nxp/rdc_cal
+    chown system audio /efs/nxp/temp_cal
+    chmod 0660 /efs/nxp/rdc_cal
+    chmod 0660 /efs/nxp/temp_cal
 
-    chown audio audio /sys/class/richtek_spm/rt_amp0/t
-    chown audio audio /sys/class/richtek_spm/rt_amp0/tmax
-    chown audio audio /sys/class/richtek_spm/rt_amp0/tmaxcnt
-    chown audio audio /sys/class/richtek_spm/rt_amp0/xmax
-    chown audio audio /sys/class/richtek_spm/rt_amp0/xmaxcnt
-    chown audio audio /sys/class/richtek_spm/rt_amp0/xpeak
-    chmod 0440 /sys/class/richtek_spm/rt_amp0/t
-    chmod 0440 /sys/class/richtek_spm/rt_amp0/tmax
-    chmod 0440 /sys/class/richtek_spm/rt_amp0/tmaxcnt
-    chmod 0440 /sys/class/richtek_spm/rt_amp0/xmax
-    chmod 0440 /sys/class/richtek_spm/rt_amp0/xmaxcnt
-    chmod 0440 /sys/class/richtek_spm/rt_amp0/xpeak
+    chown audio audio /sys/class/nxp/tfa_log/data_maxx
+    chown audio audio /sys/class/nxp/tfa_log/count_overxmax
+    chown audio audio /sys/class/nxp/tfa_log/data_maxt
+    chown audio audio /sys/class/nxp/tfa_log/count_overtmax
+    chmod 0440 /sys/class/nxp/tfa_log/data_maxx
+    chmod 0440 /sys/class/nxp/tfa_log/count_overxmax
+    chmod 0440 /sys/class/nxp/tfa_log/data_maxt
+    chmod 0440 /sys/class/nxp/tfa_log/count_overtmax
 
     chmod 0660 /sys/kernel/debug/audio/log
     chown audioserver system /sys/kernel/debug/audio/log
@@ -717,11 +766,11 @@ on fs
     chown system audio /dev/radio0
     chmod 0660 /dev/radio0
 
-#load ecd firmware
-    write /proc/ecd/load_firmware 1
-    
 # ARGOSD network_throughput
     chown system system /dev/network_throughput
+
+#load ecd firmware
+    write /proc/ecd/load_firmware 1
 
 # ARGOSD
 service argos-daemon /vendor/bin/argosd
