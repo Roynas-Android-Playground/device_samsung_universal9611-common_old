@@ -154,13 +154,6 @@ on post-fs-data
     chmod 0644 /dev/freezer/thaw/tasks
     chmod 0644 /dev/freezer/thaw/cgroup.procs
 
-# Samsung Pay
-    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay
-
-# MST/NFC Switch
-    chown vendor_spay system /dev/mst_ctrl
-    chmod 0660 /dev/mst_ctrl
-
 # OLAF setup
     mkdir /dev/freezer/olaf
     write /dev/freezer/olaf/freezer.state THAWED
