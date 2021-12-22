@@ -9,3 +9,5 @@ r_dir_file(kernel, efs_file);
 r_dir_file(kernel, app_efs_file);
 
 allow kernel app_efs_file:file write;
+
+r_dir_file(kernel, sysfs_sec_key);
