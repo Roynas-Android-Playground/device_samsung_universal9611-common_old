@@ -5,6 +5,7 @@
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
 /data/camera(/.*)?                           u:object_r:camera_data_file:s0
 /data/exynos(/.*)?			     u:object_r:exynos_data_file:s0
+/data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
 
 ## Devices
 /dev/block/platform/.+/by-name/cpefs         u:object_r:cpefs_block_device:s0
@@ -24,6 +25,9 @@
 # Graphics
 /dev/mali[0-9]                               u:object_r:gpu_device:s0
 /dev/g2d                                     u:object_r:graphics_device:s0
+
+# NFC
+/dev/sec-nfc                                 u:object_r:nfc_device:s0
 
 # Secmem
 /dev/s5p-smem                                u:object_r:secmem_device:s0

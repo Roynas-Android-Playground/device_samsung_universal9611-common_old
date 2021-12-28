@@ -4,6 +4,7 @@ type display_vendor_data_file, file_type, data_file_type;
 type exynos_data_file, file_type, data_file_type;
 type media_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
+type nfc_vendor_data_file, file_type, data_file_type;
 
 # debug types
 type debugfs_mali, fs_type, debugfs_type;
