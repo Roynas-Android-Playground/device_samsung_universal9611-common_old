@@ -48,8 +48,8 @@ PRODUCT_COPY_FILES += \
 
 # Biometric Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.samsung \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.samsung
+    vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a50 \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.a50
     
 # Bluetooth
 PRODUCT_PACKAGES += \
