@@ -277,6 +277,10 @@ on post-fs-data
     chmod 0755 /sys/kernel/debug/tracing
     restorecon /sys/kernel/debug/tracing/trace_marker
 
+# MST/NFC Switch
+    chown system system /dev/mst_ctrl
+    chmod 0660 /dev/mst_ctrl
+
 # HWC data
     mkdir /data/vendor/log/hwc 0771 system graphics
 
@@ -676,8 +680,8 @@ on fs
     chown system radio /sys/class/sensors/sensor_dev/flush
 	
 # Permissions for  LSI NFC
-#    chmod 0660 /dev/sec-nfc
-#    chown nfc nfc /dev/sec-nfc
+    chmod 0660 /dev/sec-nfc
+    chown nfc nfc /dev/sec-nfc
 
 # Diag-daemon
     mkdir /efs/cpdebug 0771 radio system
@@ -690,8 +694,8 @@ on fs
     chown system system /dev/p3
 
 # Permissions for NXP NFC
-#    chmod 0660 /dev/pn547
-#    chown nfc nfc /dev/pn547
+    chmod 0660 /dev/pn547
+    chown nfc nfc /dev/pn547
 
 # Permissions for NXP ESE
     chmod 0660 /dev/p61
