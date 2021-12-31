@@ -1,0 +1,8 @@
+# system_app.te
+
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file r_file_perms;
+
+allow system_app proc_pagetypeinfo:file { open read getattr };
+
+allow system_app proc_vmallocinfo:file r_file_perms;
