@@ -7,4 +7,7 @@ allow init kernel:system module_request;
 
 allow init socket_device:sock_file { create setattr unlink };
 
+allow init boot_block_device:lnk_file { relabelto };
+allow init dtb_block_device:lnk_file { relabelto };
+allow init dtbo_block_device:lnk_file { relabelto };
 allow init vendor_block_device:lnk_file { relabelto };
