@@ -202,7 +202,7 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 # swap
-    swapon_all /vendor/etc/fstab.exynos9611 
+    swapon_all /vendor/etc/fstab.exynos9610 
     
 # SensorHub Log folder
     mkdir /data/vendor/sensorhub/ 0771 root system
