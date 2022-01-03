@@ -69,7 +69,6 @@ static hidl_vec<int8_t> stringToVec(const std::string& str) {
 
 FingerprintInscreen::FingerprintInscreen() {
     mSecBiometricsFingerprintService = ISecBiometricsFingerprint::getService();
-    set(TSP_CMD_PATH, "set_fod_rect,440,2020,640,2220");
 }
 
 void FingerprintInscreen::requestResult(int, const hidl_vec<int8_t>&) {
@@ -176,15 +175,15 @@ Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallb
 }
 
 Return<int32_t> FingerprintInscreen::getPositionX() {
-    return 440;
+    return 435;
 }
 
 Return<int32_t> FingerprintInscreen::getPositionY() {
-    return 2020;
+    return 1965;
 }
 
 Return<int32_t> FingerprintInscreen::getSize() {
-    return 200;
+    return 210;
 }
 
 }  // namespace implementation
