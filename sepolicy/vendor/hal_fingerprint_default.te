@@ -4,3 +4,6 @@ r_dir_file(hal_fingerprint_default, sec_efs_file);
 
 allow hal_fingerprint_default sysfs_battery:dir search;
 allow hal_fingerprint_default sysfs_battery:file { open read };
+
+allow hal_fingerprint_default sysfs_lcd_writable:dir search;
+allow hal_fingerprint_default sysfs_lcd_writable:file { open read };
