@@ -24,9 +24,13 @@ genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_
 genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                     u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/vsync                                                        u:object_r:sysfs_decon_writable:s0
 genfscon sysfs /devices/platform/148c0000.decon_t/vsync                                                        u:object_r:sysfs_decon_writable:s0
-genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video6/name                                         u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video7/name                                         u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video8/name                                         u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14400000.fimc_is_sensor/video4linux                                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14410000.fimc_is_sensor/video4linux 	                                       u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14410700.fimc_is_sensor/video4linux                                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14420000.fimc_is_sensor/video4linux                                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14490000.fimc_is/video4linux                                                  u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14630000.gdc/video4linux                                                      u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/12c30000.mfc0/video4linux                                                     u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-15/15-0000/s2mpu09-rtc/rtc/rtc0/hctosys                   u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/system/chip-id/revision                                                                u:object_r:sysfs_chipid:s0
 
