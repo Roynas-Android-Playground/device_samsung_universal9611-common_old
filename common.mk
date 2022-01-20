@@ -78,10 +78,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl
-
-# DOZE
-PRODUCT_PACKAGES += \
-    SamsungDoze
     
 # DRM
 PRODUCT_PACKAGES += \
