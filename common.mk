@@ -81,7 +81,8 @@ PRODUCT_PACKAGES += \
     
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.clearkey
+    android.hardware.drm@1.3-service.clearkey \
+    android.hardware.drm@1.3.vendor
 
 # FastCharge
 PRODUCT_PACKAGES += \
@@ -91,6 +92,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
+
+# GPS/GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor
 
 # Graphics
 # Device uses high-density artwork where available
@@ -209,6 +214,9 @@ PRODUCT_PACKAGES += \
 
 # Ril
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
     secril_config_svc
 
 # Sensors
