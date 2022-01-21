@@ -3,4 +3,4 @@ allow secril_config_svc proc_simslot_count:file r_file_perms;
 allow secril_config_svc imei_efs_file:dir { read write search };
 allow secril_config_svc imei_efs_file:file { read write open getattr };
 
-dontaudit secril_config_svc exported3_radio_prop:property_service { set };
+dontaudit secril_config_svc radio_control_prop:property_service { set };
