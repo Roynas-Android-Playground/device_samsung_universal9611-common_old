@@ -5,6 +5,8 @@ set_prop(vendor_init, vendor_usb_prop);
 
 get_prop(vendor_init, vendor_radio_prop);
 get_prop(vendor_init, vendor_gps_prop);
+get_prop(vendor_init, vts_status_prop);
+get_prop(vendor_init, system_prop);
 
 allow vendor_init cgroup:file getattr;
 allow vendor_init tmpfs:dir { write add_name };
