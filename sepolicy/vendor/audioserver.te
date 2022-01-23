@@ -1,3 +1,0 @@
-# audioserver.te
-
-get_prop(audioserver, vendor_default_prop);
