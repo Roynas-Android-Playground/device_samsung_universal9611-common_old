@@ -22,10 +22,14 @@ vendor/lib/libprofileparamstorage.so
 vendor/lib/librecordalive.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
+vendor/lib/lib_SoundBooster_ver1000.so
 vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecaudioinfo.so
+vendor/lib64/lib_SoundBooster_ver1000.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 
 ## Audio Firmware
 vendor/firmware/APBargeIn_AUDIO_SLSI.bin
