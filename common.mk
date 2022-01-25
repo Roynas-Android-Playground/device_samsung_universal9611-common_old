@@ -49,11 +49,7 @@ PRODUCT_COPY_FILES += \
 
 # Biometric Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a50 \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.a50
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/fod/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    android.hardware.biometrics.fingerprint@2.3-service.samsung
 
 # Bluetooth
 PRODUCT_PACKAGES += \
