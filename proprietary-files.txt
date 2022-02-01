@@ -155,6 +155,12 @@ vendor/lib64/libkeymaster_helper.so
 vendor/lib64/hw/memtrack.exynos9610.so
 vendor/lib/hw/memtrack.exynos9610.so
 
+## Mobicore
+vendor/app/mcRegistry/00060308060501020000000000000000.tabin
+vendor/app/mcRegistry/07061000000000000000000000000000.tlbin
+vendor/app/mcRegistry/09090000070100010000000000000000.tlbin
+vendor/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
+
 ## OMX
 vendor/lib/libepicoperator.so
 vendor/lib/libstagefrighthw.so
