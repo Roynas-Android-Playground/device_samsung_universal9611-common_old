@@ -1,86 +1,6 @@
 {
     "Nodes": [
         {
-            "Name": "CPULittleClusterMaxFreq",
-            "Path": "/dev/cluster0_freq_max",
-            "Values": [
-                "0x001a94b0",
-                "0x00163780",
-                "0x00143bb0",
-                "0x0012a570"
-            ],
-            "HoldFd": true,
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CPULittleClusterMinFreq",
-            "Path": "/dev/cluster0_freq_min",
-            "Values": [
-                "0x001a94b0",
-                "0x00163780",
-                "0x0012a570",
-                "0x00110f30",
-                "0x000c4c70",
-                "0x00000000"
-            ],
-            "HoldFd": true,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CPUBigClusterMaxFreq",
-            "Path": "/dev/cluster1_freq_max",
-            "Values": [
-                "0x00234f10",
-                "0x001e26c0",
-                "0x00196400",
-                "0x00163780",
-                "0x0014a140"
-            ],
-            "HoldFd": true,
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "CPUBigClusterMinFreq",
-            "Path": "/dev/cluster1_freq_min",
-            "Values": [
-                "0x00234f10",
-                "0x00196400",
-                "0x00163780",
-                "0x0014a140",
-                "0x00130b00",
-                "0x00000000"
-            ],
-            "HoldFd": true,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "GPUMaxFreq",
-            "Path": "/dev/gpu_freq_max",
-            "Values": [
-                "0x0008ba60",
-                "0x000ba860",
-                "0x000ccd58",
-                "0x00101148"
-            ],
-            "HoldFd": true,
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "GPUMinFreq",
-            "Path": "/dev/gpu_freq_min",
-            "Values": [
-                "0x000ccd58",
-                "0x000ba860",
-                "0x0006f158",
-                "0x0003f7a0"
-            ],
-            "HoldFd": true,
-            "ResetOnInit": true
-        },
-        {
             "Name": "TASchedtuneBoost",
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
@@ -183,36 +103,6 @@
             "Value": "CAMERA_STREAMING_MID"
         },
         {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 0,
-            "Value": "0x001e26c0"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x00234f10"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x00234f10"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPULittleClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x001a94b0"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x001a94b0"
-        },
-        {
             "PowerHint": "CAMERA_SHOT",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 1000,
@@ -259,18 +149,6 @@
             "Node": "PowerHALRenderingState",
             "Duration": 0,
             "Value": "EXPENSIVE_RENDERING"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMinFreq",
-            "Duration": 0,
-            "Value": "0x000ccd58"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMaxFreq",
-            "Duration": 0,
-            "Value": "0x00101148"
         },
         {
             "PowerHint": "INTERACTIVE",
