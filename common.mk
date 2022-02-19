@@ -302,6 +302,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
 
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 # Shims
 PRODUCT_PACKAGES += \
     libshim_sensorndkbridge \
