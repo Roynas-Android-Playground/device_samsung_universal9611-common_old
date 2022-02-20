@@ -274,6 +274,7 @@ on boot
 
     # Permissions for Touchscreen
     chown system radio /sys/class/sec/tsp/cmd
+    chown system system /sys/class/sec/tsp/fod_pressed
     chown system system /sys/class/sec/tsp/input/enabled
     chmod 0660 /sys/class/sec/tsp/input/enabled
     chown root system /proc/tsp_msg
