@@ -28,25 +28,4 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <resources>
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">70</integer>
-
-    <!-- Color of the FOD view -->
-    <color name="config_udfpsColor">#00ff00ff</color>
-
-    <!-- HBM type of UDFPS overlay.
-            0 - GLOBAL HBM
-            1 - LOCAL HBM
-    -->
-    <integer name="config_udfps_hbm_type">0</integer>
-
-    <!-- HBM type of UDFPS overlay.
-            0 - GLOBAL HBM
-            1 - LOCAL HBM
-    -->
-    <integer name="config_udfpsHbmType">0</integer>
-
-    <!-- Udfps vendor code -->
-    <integer name="config_udfps_vendor_code">455</integer>
-
-    <!-- Enable doze mode -->
-    <bool name="doze_display_state_supported">true</bool>
 </resources>
