@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version A505FDDS9CUK1, unless pinned
+# Common proprietary files - from Samsung package version A505FDDU9CVB1, unless pinned
 
 ## Audio
 vendor/etc/default_volume_tables.xml
