@@ -31,6 +31,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          optimized for showing system-provided content while the device is
          non-interactive. -->
     <bool name="doze_display_state_supported">true</bool>    
+    <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
+    <integer name="config_chargingFastThreshold">10800000</integer>
+
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">70</integer>
 </resources>
