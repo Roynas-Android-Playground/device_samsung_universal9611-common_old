@@ -253,7 +253,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.1-service.typec
+    android.hardware.usb@1.3-service.samsung
 
 # Vibrator
 PRODUCT_PACKAGES += \
