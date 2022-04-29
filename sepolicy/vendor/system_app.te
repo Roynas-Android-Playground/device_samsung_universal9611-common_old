@@ -6,3 +6,7 @@ allow system_app sysfs_zram:file r_file_perms;
 allow system_app proc_pagetypeinfo:file { open read getattr };
 
 allow system_app proc_vmallocinfo:file r_file_perms;
+
+allow system_app hal_light_default:binder call;
+
+allow system_app hal_power_default:binder call;
