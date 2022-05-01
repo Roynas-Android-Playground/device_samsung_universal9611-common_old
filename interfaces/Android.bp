@@ -1,0 +1,4 @@
+hidl_package_root {
+    name: "vendor.samsung.hardware.biometrics",
+    path: "device/samsung/a50-common/interfaces/biometrics",
+}
