@@ -63,6 +63,16 @@
             "ResetOnInit": true
         },
         {
+            "Name": "LowPowerProximity",
+            "Path": "/sys/class/sec/tsp/cmd",
+            "Values": [
+                "ear_detect_enable,0",
+                "ear_detect_enable,1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
             "Name": "DoubleTapToWakeEnable",
             "Path": "/sys/class/sec/tsp/cmd",
             "Values": [
@@ -230,6 +240,12 @@
             "Node": "TouchscreenEnable",
             "Duration": 0,
             "Value": "1"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "LowPowerProximity",
+            "Duration": 0,
+            "Value": "ear_detect_enable,1"
         },
         {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
