@@ -49,7 +49,8 @@ PRODUCT_COPY_FILES += \
 
 # Biometric Fingerprint
 PRODUCT_PACKAGES += \
-     android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611
+     android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611 \
+     SamsungUdfpsHandler.universal9611
 
 # Bluetooth
 PRODUCT_PACKAGES += \
