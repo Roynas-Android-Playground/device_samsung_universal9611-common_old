@@ -110,7 +110,8 @@ PRODUCT_PACKAGES += \
 
 # GPS/GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
+    init.gps.rc
 
 # Graphics
 # Device uses high-density artwork where available
