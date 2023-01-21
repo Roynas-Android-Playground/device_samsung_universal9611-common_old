@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/a50-common
+COMMON_PATH := device/samsung/universal9611-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/a50-common/a50-common-vendor.mk)
+$(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
 
 # Biometric Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.biometrics.fingerprint@3.0-service.a50
+    vendor.samsung.hardware.biometrics.fingerprint@3.0-service.universal9611
 
 # Bluetooth
 PRODUCT_PACKAGES += \

@@ -17,9 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#pragma push_macro("PROPERTY_VALUE_MAX")
-
-#define BTM_DEF_LOCAL_NAME "Galaxy A50"
+#define BTM_DEF_LOCAL_NAME "Galaxy A51"
 
 /*
  * Toggles support for vendor specific extensions such as RPA offloading,
@@ -31,7 +29,5 @@
 #define BTA_AV_SINK_INCLUDED TRUE
 
 #define BTM_ESCO_TRANSPORT_UNIT_SIZE_PCM16
-
-#pragma pop_macro("PROPERTY_VALUE_MAX")
 
 #endif /* _BDROID_BUILDCFG_H */

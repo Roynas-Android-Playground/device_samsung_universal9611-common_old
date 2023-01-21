@@ -16,14 +16,14 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter a505f a505fn, $(TARGET_DEVICE)),)
+ifneq ($(filter a51, $(TARGET_DEVICE)),)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 include $(COMMON_PATH)/AndroidBoard.mk
 
 include $(CLEAR_VARS)
 
-EGL_LIBS := libGLES_mali.so libOpenCL.so libOpenCL.so.1 libOpenCL.so.1.1 hw/vulkan.universal9610.so
+EGL_LIBS := libGLES_mali.so libOpenCL.so libOpenCL.so.1 libOpenCL.so.1.1 hw/vulkan.universal9611.so
 
 EGL_32_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/lib/,$(EGL_LIBS))
 $(EGL_32_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

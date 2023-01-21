@@ -34,9 +34,9 @@ LOCAL_SHARED_LIBRARIES := \
     android.hardware.biometrics.fingerprint@2.3 \
     vendor.samsung.hardware.biometrics.fingerprint@3.0
 
-LOCAL_MODULE := vendor.samsung.hardware.biometrics.fingerprint@3.0-service.a50
-LOCAL_INIT_RC := vendor.samsung.hardware.biometrics.fingerprint@3.0-service.a50.rc
-LOCAL_VINTF_FRAGMENTS := vendor.samsung.hardware.biometrics.fingerprint@3.0-service.a50.xml
+LOCAL_MODULE := vendor.samsung.hardware.biometrics.fingerprint@3.0-service.universal9611
+LOCAL_INIT_RC := vendor.samsung.hardware.biometrics.fingerprint@3.0-service.universal9611.rc
+LOCAL_VINTF_FRAGMENTS := vendor.samsung.hardware.biometrics.fingerprint@3.0-service.universal9611.xml
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := samsung
