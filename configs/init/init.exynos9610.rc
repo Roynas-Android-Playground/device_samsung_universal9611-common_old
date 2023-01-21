@@ -759,8 +759,8 @@ on fs
     chown audioserver system /sys/kernel/debug/audio/bootlog_enable
 
 # FM Radio
-    chown system audio /dev/radio0
-    chmod 0660 /dev/radio0
+#    chown system audio /dev/radio0
+#    chmod 0660 /dev/radio0
 
 # ARGOSD network_throughput
     chown system system /dev/network_throughput
