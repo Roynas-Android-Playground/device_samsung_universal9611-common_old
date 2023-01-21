@@ -121,8 +121,8 @@ PRODUCT_PACKAGES += \
 
 # init
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/fstab.exynos9610:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9610 \
-    $(COMMON_PATH)/configs/init/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610 \
+    $(COMMON_PATH)/configs/init/fstab.exynos9611:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9611 \
+    $(COMMON_PATH)/configs/init/fstab.exynos9611:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9611 \
     $(COMMON_PATH)/configs/init/init.exynos9610.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9610.rc \
     $(COMMON_PATH)/configs/init/init.exynos9610.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9610.usb.rc \
     $(COMMON_PATH)/configs/init/init.recovery.exynos9610.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos9610.rc \

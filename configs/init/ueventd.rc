@@ -63,6 +63,8 @@
 /dev/video7               0660   mediacodec mediadrm
 /dev/video8               0660   mediacodec mediadrm
 /dev/video9               0660   mediacodec mediadrm
+/dev/video10              0660   mediacodec mediadrm
+/dev/video11              0660   mediacodec mediadrm
 
 # wfd
 /dev/tsmux                0660   media      graphics
@@ -73,6 +75,7 @@
 /dev/video102             0660   cameraserver   camera
 /dev/video103             0660   cameraserver   camera
 /dev/video104             0660   cameraserver   camera
+/dev/video105             0660   cameraserver   camera
 /dev/video107             0660   cameraserver   camera
 /dev/video109             0660   cameraserver   camera
 /dev/video110             0660   cameraserver   camera
@@ -125,6 +128,10 @@
 /dev/video223             0660   cameraserver   camera
 /dev/video224             0660   cameraserver   camera
 /dev/video225             0660   cameraserver   camera
+/dev/video226             0660   cameraserver   camera
+/dev/video227             0660   cameraserver   camera
+/dev/video228             0660   cameraserver   camera
+/dev/video229             0660   cameraserver   camera
 /dev/video240             0660   cameraserver   camera
 /dev/video241             0660   cameraserver   camera
 /dev/media2               0660   media      media
@@ -134,7 +141,7 @@
 /dev/vipx                 0660   cameraserver   camera
 
 # For FRP
-/dev/block/by-name/persist	0600	system	system
+/dev/block/by-name/persist	      0600   system          system
 
 # jpeg
 /dev/m2m1shot_jpeg	      0660   media          media
@@ -143,9 +150,14 @@
 # audio
 /dev/seiren               0660   system     audio
 
-# Mobicore
-/dev/mobicore             0600   drmrpc     drmrpc
-/dev/mobicore-user        0666   drm        drmrpc
+# TEEGRIS
+/dev/tzdev                0666   system     system
+/dev/tziwsock             0666   system     system
+/dev/tziwshmem            0660   system     system
+/dev/ionfd2phys           0660   system     system
+/dev/tuihw                0660   system     system
+/dev/tzirs                0660   system     system
+/dev/nwfsdev              0660   system     system
 
 # Secure MEM driver
 /dev/s5p-smem             0660   system     system
@@ -155,19 +167,25 @@
 /dev/ttyGS1               0660   system     system
 /dev/ttyGS2               0660   system     system
 
+# dev ril bridge
+/dev/drb	              0660   system     radio
+
 # Modem Interface
 /dev/block/by-name/radio    0660   system     radio
 /dev/block/by-name/cp_debug 0660   radio      system
-/sys/devices/platform/10000.mif_pdata	sim/ds_detect	0660	radio	system
 /dev/umts*                  0660   system     radio
-/dev/ipc*                   0660   system     radio
 /dev/umts_csd               0660   system     loop_radio
 /dev/smd4                   0660   system     radio
 /dev/ramdump_memshare       0660   system     radio
 /dev/umts_ciq*              0660   system     bridge_rw
 
-# dev ril bridge
-/dev/drb                0660   system     radio
+# FRP
+/dev/block/platform/13520000.ufs/by-name/frp 0660   root      system
+
+# Google FRP solution
+/dev/block/by-name/persistent    0660    system    system
+# Reactivation lock
+/dev/block/by-name/steady    0660    system    system
 
 # interactive governor parameters
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate			0660	system	system
@@ -202,19 +220,6 @@
 /dev/mx140_usb_clk_test_0 0660   wifi     wifi
 /dev/scsc_log_collector_0 0660   wifi     wifi
 
-# TEEGRIS
-/dev/tzdev                0666   system     system
-/dev/tziwsock             0666   system     system
-/dev/ionfd2phys           0660   system     system
-/dev/tzirs                0660   system     system
-/dev/tuihw                0660   system     system
-
-# Google FRP solution
-/dev/block/platform/13520000.ufs/by-name/persistent    0660    system    system
-
-# Reactivation lock
-/dev/block/platform/13520000.ufs/by-name/steady    0660    system    system
-
 # Sensor Hub
 /dev/ssp_sensorhub        0660   system     system
 /dev/ssp_data_injection   0660   system     system
@@ -222,3 +227,7 @@
 /sys/devices/platform/11980000.contexthub/iio:device*    buffer/enable       0660    system    system
 /sys/devices/platform/11980000.contexthub/iio:device*    buffer/length       0660    system    system
 /sys/bus/iio/devices/iio:device*    0664   system     radio
+
+# Grip Sensor
+/dev/input/event*				0660	system	input
+/sys/devices/virtual/input/input*   enable      0660	system	input
