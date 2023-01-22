@@ -36,5 +36,4 @@ def PrintInfo(info, dest):
 
 def OTA_InstallEnd(info):
   AddImage(info, "IMAGES", "dtbo.img", "/dev/block/by-name/dtbo")
-  AddImage(info, "IMAGES", "vbmeta.img", "/dev/block/by-name/vbmeta")
   return
