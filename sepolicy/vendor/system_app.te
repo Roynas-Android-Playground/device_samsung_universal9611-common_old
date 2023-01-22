@@ -10,3 +10,5 @@ allow system_app proc_vmallocinfo:file r_file_perms;
 allow system_app hal_light_default:binder call;
 
 allow system_app hal_power_default:binder call;
+
+allow system_app zygote:unix_stream_socket getopt;
