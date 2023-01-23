@@ -97,6 +97,7 @@ vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
 vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
 vendor/lib/vendor.samsung_slsi.hardware.epic@1.0.so
 vendor/lib/vintf-codecsolution-V2-ndk.so
+vendor/lib/hw/vendor.samsung_slsi.hardware.epic@1.0-impl.so
 vendor/lib/vndk/libstagefright_omx_utils.so
 vendor/lib/vndk/libstagefright_xmlparser.so
 vendor/lib64/libepicoperator.so
@@ -106,6 +107,7 @@ vendor/lib64/libexynosscaler.so
 vendor/lib64/libexynosutils.so
 vendor/lib64/libexynosv4l2.so
 vendor/lib64/libstagefright_foundation_vendor.so
+vendor/lib64/hw/vendor.samsung_slsi.hardware.epic@1.0-impl.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
