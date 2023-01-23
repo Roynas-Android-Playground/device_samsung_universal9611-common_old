@@ -76,3 +76,4 @@ extern "C" int * mixer_read_event(struct mixer *mixer, uint param_2) {
 
     return NULL;
 }
+extern "C" int * mixer_read_event_sec(struct mixer *mixer, uint param_2) {return mixer_read_event(mixer, param_2);}
