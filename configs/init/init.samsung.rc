@@ -1,6 +1,3 @@
-on early-init  
-    umount /product
-
 on init
     # for audit message
     chown system system /proc/avc_msg
