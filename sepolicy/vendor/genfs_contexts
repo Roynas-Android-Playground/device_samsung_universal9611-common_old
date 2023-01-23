@@ -41,6 +41,6 @@ genfscon sysfs /module/scsc_bt/parameters/bluetooth_address                     
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                                                u:object_r:sysfs_mem_boost_writable:s0
 
 # mDnie
-genfscon sysfs /class/mdnie/										       u:object_r:sysfs_mdnie_writable:s0
+genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/mdnie/					       u:object_r:sysfs_mdnie_writable:s0
 
-genfscon sysfs /class/backlight/panel/									       u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/panel/panel_drv/backlight/panel					       u:object_r:sysfs_backlight_writable:s0
