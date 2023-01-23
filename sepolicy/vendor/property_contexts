@@ -15,6 +15,7 @@ hwc.exynos.vsync_mode      u:object_r:vendor_hwc_prop:s0
 vendor.hwc.display.        u:object_r:vendor_hwc_prop:s0
 
 # Radio
+ro.multisim.               u:object_r:radio_prop:s0
 ro.radio.needcalibration   u:object_r:vendor_radio_prop:s0
 ril.clatd.                 u:object_r:vendor_radio_prop:s0
 
@@ -31,4 +32,14 @@ persist.rmnet.             u:object_r:persist_rmnet_prop:s0
 persist.data.df.           u:object_r:persist_data_df_prop:s0
 persist.data.wda.          u:object_r:persist_data_wda_prop:s0
 
+# Wlbtd
 vendor.wlbtd.		   u:object_r:vendor_wlbtd_prop:s0
+
+# Samsung
+ro.product_ship                u:object_r:exported_default_prop:s0
+ro.debug_level                 u:object_r:exported_default_prop:s0
+ro.hardware.chipname           u:object_r:exported_default_prop:s0
+ro.build.PDA                   u:object_r:exported_default_prop:s0
+persist.sys.sec_feature	       u:object_r:exported_default_prop:s0
+persist.sys.sec_feature2       u:object_r:exported_default_prop:s0
+persist.sys.sec_pcid	       u:object_r:exported_default_prop:s0

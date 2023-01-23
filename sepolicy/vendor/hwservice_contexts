@@ -5,3 +5,4 @@ vendor.samsung.hardware.gnss::ISehGnss                                          
 vendor.samsung.hardware.radio.bridge::ISehBridge                                        u:object_r:hal_telephony_hwservice:s0
 vendor.samsung.hardware.radio.channel::ISehChannel                                      u:object_r:hal_telephony_hwservice:s0
 vendor.samsung.hardware.radio::ISehRadio                                                u:object_r:hal_telephony_hwservice:s0
+vendor.samsung_slsi.hardware.epic::IEpicRequest						u:object_r:hal_epic_hwservice:s0

@@ -13,3 +13,5 @@ allow hal_audio_default sysfs_audio:file r_file_perms;
 allow hal_audio_default efs_file:file r_file_perms;
 
 allow hal_audio_default rild:unix_stream_socket connectto;
+
+allow hal_audio_default proc_sound_devicetree:file r_file_perms;
