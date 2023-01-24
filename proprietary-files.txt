@@ -51,7 +51,6 @@ vendor/firmware/kernel_bin_inception.bin
 vendor/firmware/kernel_bin_mfb.bin
 vendor/firmware/kernel_bin_mobile_vgg.bin
 vendor/firmware/kernel_bin_nfd.bin
-vendor/firmware/nfc/libpn553_fw.so
 vendor/firmware/param_ti.bin
 vendor/firmware/rtdsp.bin
 vendor/firmware/rtdsp_param.bin
@@ -189,3 +188,12 @@ vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/etc/gnss/ca.pem
 vendor/etc/gnss/gps.cfg
 vendor/etc/gnss/gps.debug.cfg
+
+# NFC
+vendor/bin/hw/nxp.android.hardware.nfc@1.1-service
+vendor/etc/init/nxp.android.hardware.nfc@1.1-service.rc
+vendor/etc/init/init.nfc.samsung.rc
+vendor/lib64/nfc_nci_nxp.so
+vendor/lib64/vendor.nxp.nxpnfc@1.0.so
+vendor/lib64/vendor.nxp.nxpnfc@1.1.so
+vendor/firmware/nfc/libpn553_fw.so
