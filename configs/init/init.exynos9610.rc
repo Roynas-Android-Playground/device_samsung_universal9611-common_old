@@ -50,49 +50,6 @@ on init
     ## SCSC BT
     chown bluetooth bluetooth /sys/module/scsc_bt/parameters/bluetooth_address
 
-    # add stune/hot
-    mkdir /dev/stune/hot
-    chown system system /dev/stune/hot
-    chown system system /dev/stune/hot/tasks
-    chmod 0664 /dev/stune/hot/tasks
-
-    # EAS stune boosting interfaces
-    chown system system /dev/stune/top-app/schedtune.boost
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /dev/stune/top-app/schedtune.prefer_perf
-    chown system system /dev/stune/top-app/cgroup.procs
-
-    chown system system /dev/stune/foreground/schedtune.boost
-    chown system system /dev/stune/foreground/schedtune.prefer_idle
-    chown system system /dev/stune/foreground/schedtune.prefer_perf
-    chown system system /dev/stune/foreground/cgroup.procs
-
-    chown system system /dev/stune/background/schedtune.boost
-    chown system system /dev/stune/background/schedtune.prefer_idle
-    chown system system /dev/stune/background/schedtune.prefer_perf
-    chown system system /dev/stune/background/cgroup.procs
-
-    chown system system /dev/stune/schedtune.boost
-    chown system system /dev/stune/schedtune.prefer_idle
-    chown system system /dev/stune/schedtune.prefer_perf
-    chown system system /dev/stune/cgroup.procs
-
-    write /dev/stune/top-app/schedtune.boost 0
-    write /dev/stune/top-app/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.prefer_perf 0
-    write /dev/stune/top-app/schedtune.util_est_en 1
-    write /dev/stune/top-app/schedtune.ontime_en 1
-
-    write /dev/stune/foreground/schedtune.boost 0
-    write /dev/stune/foreground/schedtune.prefer_idle 0
-    write /dev/stune/foreground/schedtune.prefer_perf 0
-    write /dev/stune/foreground/schedtune.util_est_en 1
-    write /dev/stune/foreground/schedtune.ontime_en 1
-
-    write /dev/stune/background/schedtune.boost 0
-    write /dev/stune/background/schedtune.prefer_idle 0
-    write /dev/stune/background/schedtune.prefer_perf 0
-
     write /dev/stune/schedtune.boost 0
 
     chown system system /dev/cpuset/tasks
