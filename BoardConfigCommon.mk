@@ -97,7 +97,7 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 ## Partitions
 BOARD_FLASH_BLOCK_SIZE := 4096
-
+BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := efs
 
 ## Platform
