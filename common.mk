@@ -178,7 +178,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
-PRODUCT_ENFORCE_RRO_TARGETS += *
+PRODUCT_ENFORCE_RRO_TARGETS += framework-res SystemUI SettingsProvider CarrierConfig
 
 # Permissions
 PRODUCT_COPY_FILES += \
