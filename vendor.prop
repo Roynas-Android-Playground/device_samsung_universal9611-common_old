@@ -32,6 +32,8 @@ ro.surface_flinger.use_color_management=true
 
 ## Samsung specific
 ro.product_ship=true
+ro.vendor.sec.radio.def_network=9
+
 # Set csc support in OMX
 # If not set or set to 0, OMX will only use BT.601 colorspace.
 ro.vendor.cscsupported=1

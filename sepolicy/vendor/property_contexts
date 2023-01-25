@@ -18,6 +18,7 @@ vendor.hwc.display.        u:object_r:vendor_hwc_prop:s0
 ro.multisim.               u:object_r:radio_prop:s0
 ro.radio.needcalibration   u:object_r:vendor_radio_prop:s0
 ril.clatd.                 u:object_r:vendor_radio_prop:s0
+ro.vendor.sec.		   u:object_r:vendor_radio_prop:s0
 
 # Sensors
 persist.sns.camera_light   u:object_r:vendor_sensors_prop:s0
