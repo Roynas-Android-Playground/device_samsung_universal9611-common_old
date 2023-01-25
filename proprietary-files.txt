@@ -23,6 +23,7 @@ vendor/lib/lib_SamsungRec_07010.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/soundfx/libswdap.so
+vendor/lib/soundfx/libaudioeffectoffload.so
 
 ## DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
