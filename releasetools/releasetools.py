@@ -44,7 +44,7 @@ def PrintInfo(info, dest):
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
 
 def OTA_Assertions(info):
-  android_info = info.input_zip.read("OTA/android-info.txt")
+  android_info = info.input_zip.read("OTA/android-info.txt").decode('utf-8')
   m = re.search(r'require\s+version-bootloader-min\s*=\s*(\S+)', android_info)
   if m:
     bootloader_version = m.group(1)
