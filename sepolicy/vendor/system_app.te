@@ -12,3 +12,7 @@ allow system_app hal_light_default:binder call;
 allow system_app hal_power_default:binder call;
 
 allow system_app zygote:unix_stream_socket getopt;
+
+# UDFPS
+get_prop(system_app, vendor_udfps_prop)
+set_prop(system_app, vendor_udfps_prop)

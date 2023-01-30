@@ -44,3 +44,6 @@ persist.sys.sec_pcid	       u:object_r:exported_default_prop:s0
 
 # PowerHAL
 vendor.powerhal.	       u:object_r:vendor_powerhal_prop:s0
+
+# FPS
+vendor.finger.down	       u:object_r:vendor_udfps_prop:s0

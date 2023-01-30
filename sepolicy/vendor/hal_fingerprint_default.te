@@ -14,3 +14,6 @@ allow hal_fingerprint_default sysfs_backlight_writable:file rw_file_perms;
 # /sys/class/sec/tsp/cmd
 allow hal_fingerprint_default sysfs_sec_touchscreen:dir r_dir_perms;
 allow hal_fingerprint_default sysfs_touchscreen_writable:file rw_file_perms;
+
+# UDFPS
+set_prop(hal_fingerprint_default, vendor_udfps_prop);
