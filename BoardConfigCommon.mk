@@ -116,6 +116,12 @@ TARGET_BOARD_PLATFORM := universal9611
 TARGET_BOOTLOADER_BOARD_NAME := exynos9611
 TARGET_SOC := exynos9611
 
+## CAMERA
+SOONG_CONFIG_NAMESPACES += exynos9611DeviceVars
+SOONG_CONFIG_exynos9611DeviceVars += \
+    model
+SOONG_CONFIG_exynos9611DeviceVars_model := $(TARGET_DEVICE)
+
 ## Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
