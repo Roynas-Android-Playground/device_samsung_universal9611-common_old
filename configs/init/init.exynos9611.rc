@@ -883,3 +883,6 @@ on post-fs
     chown root system /spu/sensorhub
     chown root system /spu/sensorhub/shub_spu.bin
     write /sys/devices/platform/11980000.contexthub/poweron 1
+
+on property:sys.boot_completed=1
+    swapon_all /vendor/etc/fstab.${ro.hardware}
