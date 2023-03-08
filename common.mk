@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
    libhwbinder \
    libhwbinder.vendor
 
+# Incremental FS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=yes
+
 TARGET_SOC_NUMBER := exynos9611
 
 # init
