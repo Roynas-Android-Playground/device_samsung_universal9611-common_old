@@ -167,6 +167,6 @@
             "Node": "DoubleTapToWakeEnable",
             "Duration": 0,
             "Value": "aot_enable,1"
-        },
+        }
     ]
 }
