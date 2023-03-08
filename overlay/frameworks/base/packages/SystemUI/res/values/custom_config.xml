@@ -1,6 +1,6 @@
 <resources>
     <!-- Color of the FOD view -->
-    <color name="config_udfpsColor">#00ff00ff</color>
+    <color name="config_udfpsColor">#00ffffff</color>
 
     <!-- HBM type of UDFPS overlay.
             0 - GLOBAL HBM
@@ -8,6 +8,4 @@
     -->
     <integer name="config_udfpsHbmType">0</integer>
 
-    <!-- Udfps vendor code -->
-    <integer name="config_udfps_vendor_code">455</integer>
 </resources>
