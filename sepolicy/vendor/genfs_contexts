@@ -27,6 +27,9 @@ genfscon sysfs /devices/platform/14630000.gdc/video4linux                       
 genfscon sysfs /devices/platform/12c30000.mfc0/video4linux                                                     u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-15/15-0000/s2mpu09-rtc/rtc/rtc0/hctosys                   u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/system/chip-id/revision                                                                u:object_r:sysfs_chipid:s0
+genfscon sysfs /devices/platform/11500000.mali/dma_buf_gpu_mem						       u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/11500000.mali/kprcs							       u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/11500000.mali/total_gpu_mem						       u:object_r:sysfs_gpu:s0
 
 # Module
 genfscon sysfs /module/scsc_bt/parameters/bluetooth_address                                                    u:object_r:sysfs_bt_writable:s0
