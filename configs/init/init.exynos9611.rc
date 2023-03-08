@@ -168,6 +168,7 @@ on post-fs
     mkdir /data/vendor 0771 root system
     mkdir /data/vendor/log 0771 root system
     mkdir /data/vendor/log/abox 0771 audioserver system
+    mkdir /data/vendor/gatekeeper 0771 system system
 
     setprop vold.post_fs_data_done 1
 
