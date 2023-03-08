@@ -162,7 +162,6 @@ vendor/lib64/libteecl.so
 vendor/lib64/libuuid.so
 
 ## WIFI
-vendor/bin/hw/macloader
 vendor/etc/init/wifi.rc
 vendor/etc/wifi/hydra_config.sdb
 vendor/etc/wifi/indoorchannel.info
