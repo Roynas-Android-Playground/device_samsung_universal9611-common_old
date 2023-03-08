@@ -25,9 +25,6 @@
 /dev/mali[0-9]                               u:object_r:gpu_device:s0
 /dev/g2d                                     u:object_r:graphics_device:s0
 
-# TEE
-/dev/tziwshmem                               u:object_r:tz_user_device:s0
-
 # NFC
 /dev/sec-nfc                                 u:object_r:nfc_device:s0
 /dev/pn547				     u:object_r:nfc_device:s0
