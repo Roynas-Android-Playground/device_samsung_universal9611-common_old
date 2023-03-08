@@ -67,7 +67,7 @@
         <value>1898000</value>
         <value>1768000</value>
         <value>1664000</value>
-        <value>1560000</value>
+        <value>1508000</value>
         <value>1456000</value>
         <value>1352000</value>
         <value>1248000</value>
@@ -94,7 +94,7 @@
     </array>
     <item name="cpu.suspend">5.79</item>
     <item name="cpu.idle">23.1</item>
-    <item name="battery.capacity">3900</item>
+    <item name="battery.capacity">3890</item>
     <item name="battery.typical.capacity">4000</item>
     <item name="wifi.controller.idle">1</item>
     <item name="wifi.controller.rx">65</item>
