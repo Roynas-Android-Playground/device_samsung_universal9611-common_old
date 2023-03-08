@@ -63,9 +63,6 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
-	vendor/lib/libaudioproxy.so)
-	    "${PATCHELF}" --add-needed libaudioproxy_shim.so "${2}"
-            ;;
     	vendor/lib64/libnfc_nci_nxp.so)
 	    sed -i 's|/etc/libnfc-nci\.conf|/vendor/etc/nfc\.conf|g' "${2}"
 	    ;;

@@ -34,8 +34,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaudioroute \
-    libtinyalsa \
     libtinycompress
 
 PRODUCT_COPY_FILES += \
@@ -272,10 +270,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung/aidl/power-libperfmgr
-
-# Shims
-PRODUCT_PACKAGES += \
-    libaudioproxy_shim
 
 # Thermal
 PRODUCT_PACKAGES += \
