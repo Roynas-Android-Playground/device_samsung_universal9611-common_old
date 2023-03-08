@@ -23,7 +23,7 @@
 
 std::vector<int> mExtraIDs = {
 #ifdef EXYNOS9611_MODEL_a51
-      17, 32, 34, 36
+      4
 #else
 #error "Please update extra camera id's configuration"
 #endif
