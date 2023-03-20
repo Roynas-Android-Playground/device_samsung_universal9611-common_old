@@ -26,6 +26,11 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <resources>
+    <!-- Doze: does this device support STATE_DOZE?
+         The display is dozing in a low power state; it is still on but is
+         optimized for showing system-provided content while the device is
+         non-interactive. -->
+    <bool name="doze_display_state_supported">true</bool>    
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">70</integer>
 </resources>
