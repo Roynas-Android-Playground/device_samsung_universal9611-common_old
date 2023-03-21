@@ -1,0 +1,1 @@
+allow system_server proc_wakelocks:file r_file_perms;

@@ -18,6 +18,7 @@ type ssm_efs_file, fs_type;
 # proc types
 type proc_simslot_count, fs_type, proc_type;
 type proc_swappiness, fs_type, proc_type;
+type proc_wakelocks, fs_type, proc_type;
 
 # sysfs types
 type sysfs_audio, sysfs_type, r_fs_type, fs_type;
