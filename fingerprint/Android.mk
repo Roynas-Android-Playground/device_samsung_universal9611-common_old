@@ -20,6 +20,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     BiometricsFingerprint.cpp \
+    TimedRestore.cpp \
     service.cpp
 
 LOCAL_SHARED_LIBRARIES := \
