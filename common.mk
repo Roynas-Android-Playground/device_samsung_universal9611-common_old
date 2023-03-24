@@ -134,7 +134,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.$(TARGET_SOC_NUMBER).rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(TARGET_SOC_NUMBER).rc \
     $(COMMON_PATH)/configs/init/init.$(TARGET_SOC_NUMBER).usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(TARGET_SOC_NUMBER).usb.rc \
     $(COMMON_PATH)/configs/init/init.recovery.exynos9610.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.$(TARGET_SOC_NUMBER).rc \
-    $(COMMON_PATH)/configs/init/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc \
     $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsung.rc \
     $(COMMON_PATH)/configs/init/ueventd.$(TARGET_SOC_NUMBER).rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
