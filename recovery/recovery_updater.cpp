@@ -36,13 +36,18 @@ Value *VerifyBootloader(const char *name, State *state,
   int min_supported_bootloader = int(min_supported_bootloader_arg[0]);
 
   int version = 0;
+  if (!bootloader.empty() && bootloader[0] == 'M') {
+	// M-series don't need assertions
+	ret = 1;
+	goto result;
+  }
   if (bootloader.length() >= 4)
     version = int(bootloader[bootloader.length() - 4]);
 
   if (version >= min_supported_bootloader) {
     ret = 1;
   }
-
+result:
   return StringValue(std::to_string(ret));
 }
 
