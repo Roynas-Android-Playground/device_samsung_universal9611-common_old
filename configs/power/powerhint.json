@@ -69,7 +69,7 @@
                 "ear_detect_enable,0",
                 "ear_detect_enable,1"
             ],
-            "DefaultIndex": 0,
+            "DefaultIndex": 1,
             "ResetOnInit": true
         },
 	{
@@ -79,7 +79,7 @@
 		"fod_lp_mode,0",
 		"fod_lp_mode,1"
 	    ],
-	    "DefaultIndex": 0,
+	    "DefaultIndex": 1,
 	    "ResetOnInit": true
 	},
         {
