@@ -72,6 +72,16 @@
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
+	{
+            "Name": "LowPowerFOD",
+	    "Path": "/sys/class/sec/tsp/cmd",
+	    "Values": [
+		"fod_lp_mode,0",
+		"fod_lp_mode,1"
+	    ],
+	    "DefaultIndex": 0,
+	    "ResetOnInit": true
+	},
         {
             "Name": "DoubleTapToWakeEnable",
             "Path": "/sys/class/sec/tsp/cmd",
@@ -245,8 +255,14 @@
             "PowerHint": "INTERACTIVE",
             "Node": "LowPowerProximity",
             "Duration": 0,
-            "Value": "ear_detect_enable,1"
+            "Value": "ear_detect_enable,0"
         },
+	{
+	    "PowerHint": "INTERACTIVE",
+	    "Node": "LowPowerFOD",
+	    "Duration": 0,
+	    "Value": "fod_lp_mode,0"
+	},
         {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
             "Node": "DoubleTapToWakeEnable",
