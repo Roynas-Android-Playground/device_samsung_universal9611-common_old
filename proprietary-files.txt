@@ -136,6 +136,7 @@ vendor/lib64/libril_sem.so
 vendor/lib64/librilutils.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libsecnativefeature.so
+vendor/lib64/libsecril-client.so
 vendor/lib64/libSemDataProps.so
 vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib64/libSemTelephonyProps.so
