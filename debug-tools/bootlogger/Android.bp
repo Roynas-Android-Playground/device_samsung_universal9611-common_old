@@ -20,4 +20,6 @@ cc_binary {
         "Logger.cpp",
     ],
     init_rc: ["logger.rc"],
+    whole_static_libs: ["libbase"],
+    vendor: true,
 }

@@ -15,24 +15,29 @@
  */
 
 #include <thread>
-
-#define KMSG_PATH "/proc/kmsg"
-#define WRITE_KMSG "/data/debug/kmsg.txt"
-
+#include <android-base/properties.h>
 #include <fstream>
 #include <iostream>
+#include <string>
 
-static void copy_kmsg(void) {
-  std::ifstream readfile(KMSG_PATH);
-  std::ofstream writefile(WRITE_KMSG);
+static void copy_kmsg(const std::string *logpath) {
+  std::ifstream readfile("/proc/kmsg");
+  std::ofstream writefile(*logpath + "/kmsg.txt");
   while (1) { writefile << readfile.rdbuf(); }
 }
-static void copy_logcat(void) {
-  system("/system/bin/logcat -b all -f /data/debug/logcat.txt");
+static void copy_logcat(const std::string *logpath) {
+  std::string cmd("/system/bin/logcat -b all");
+  cmd += " -f " + *logpath + "/logcat.txt";
+  system(cmd.c_str());
 }
+
+using android::base::GetProperty;
+
 int main(void) {
-  std::thread kmsg(copy_kmsg);
-  std::thread logcat(copy_logcat);
+  std::string kLogDir = GetProperty("vendor.logger.log_storage", "");
+  if (kLogDir.empty()) kLogDir = "/data/debug";
+  std::thread kmsg(copy_kmsg, &kLogDir);
+  std::thread logcat(copy_logcat, &kLogDir);
   kmsg.join(); // Block from exiting. since cp blocks too. 
 	       // It is stopped when killed by init
   logcat.join();

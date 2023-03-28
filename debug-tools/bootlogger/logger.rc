@@ -1,13 +1,21 @@
-service logdump /system/bin/logger
+service logdump /vendor/bin/logger
     user root
     group system
     oneshot
     disabled
 
-on post-fs-data
+on fs
+      setprop vendor.logger.init 0
+
+# Unset by init.rc
+on post-fs-data && property:vendor.logger.init=0
       mkdir /data/debug 0755 root system encryption=None
-      rm /data/debug/logcat.txt
-      rm /data/debug/kmsg.txt
+      setprop vendor.logger.log_storage "/data/debug"
+      setprop vendor.logger.init 1
+
+on property:vendor.logger.init=1
+      rm ${vendor.logger.log_storage}/logcat.txt
+      rm ${vendor.logger.log_storage}/kmsg.txt
       start logdump
 
 on property:sys.boot_completed=1
