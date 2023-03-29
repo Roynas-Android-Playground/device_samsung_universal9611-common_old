@@ -74,7 +74,7 @@
         },
 	{
             "Name": "LowPowerFOD",
-	    "Path": "/sys/class/sec/tsp/cmd",
+	    "Path": "/sys/class/sec/tsp/cmd1",
 	    "Values": [
 		"fod_lp_mode,0",
 		"fod_lp_mode,1"
@@ -84,7 +84,7 @@
 	},
         {
             "Name": "DoubleTapToWakeEnable",
-            "Path": "/sys/class/sec/tsp/cmd",
+            "Path": "/sys/class/sec/tsp/cmd2",
             "Values": [
                 "aot_enable,0",
                 "aot_enable,1"

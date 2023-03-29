@@ -75,6 +75,9 @@
 /sys/devices/virtual/input/input[0-9]/enable                  u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/sec/hall_ic(/.*)                         u:object_r:sysfs_sec_key:s0
 
+# sec_cmd HACK
+/sys/devices/virtual/sec/tsp/cmd[1-9]			      u:object_r:sysfs_touchscreen_writable:s0
+
 # GPS
 /sys/devices/soc0/machine                                     u:object_r:sysfs_sec_gps:s0
 /sys/devices/soc0/revision                                    u:object_r:sysfs_sec_gps:s0
