@@ -380,16 +380,6 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
-    <integer-array name="config_udfps_sensor_props" translatable="false" >
-        <item>540</item>  <!-- <item>sensorLocationX</item> -->
-        <item>2070</item> <!-- <item>sensorLocationY</item> -->
-        <item>110</item>   <!-- <item>sensorRadius</item> -->
-    </integer-array>
-
-    <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
-    <integer name="config_udfps_illumination_transition_ms">0</integer>
-
     <!-- Display Notch cutout-->
     <string name="config_mainBuiltInDisplayCutout">M36.95,0C26.35,0,24.15,3.8,23.15,9.8 l-0.1,0.7c-1.7,9.6-9.3,17.2-18.9,18.9c-12.7,2.2-24.8-6.2-27-18.9 c0,0-0.1-0.7-0.1-0.7C-24.15,3.8,-26.25,0,-36.95,0Z @dp</string>
 
