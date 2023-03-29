@@ -34,8 +34,7 @@ static void copy_logcat(const std::string *logpath) {
 using android::base::GetProperty;
 
 int main(void) {
-  std::string kLogDir = GetProperty("vendor.logger.log_storage", "");
-  if (kLogDir.empty()) kLogDir = "/data/debug";
+  std::string kLogDir = GetProperty("vendor.logger.log_storage", "/data/debug");
   std::thread kmsg(copy_kmsg, &kLogDir);
   std::thread logcat(copy_logcat, &kLogDir);
   kmsg.join(); // Block from exiting. since cp blocks too. 
