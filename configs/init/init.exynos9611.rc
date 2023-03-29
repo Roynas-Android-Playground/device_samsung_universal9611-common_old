@@ -468,8 +468,6 @@ on fs
     setprop vendor.logger.log_storage "/logs"
     setprop vendor.logger.init 1
 
-    setprop ro.crypto.fuse_sdcard true
-
     restorecon_recursive /logs
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
