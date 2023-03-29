@@ -4,6 +4,7 @@ set_prop(vendor_init, persist_data_wda_prop);
 set_prop(vendor_init, vendor_usb_prop);
 set_prop(vendor_init, vendor_powerhal_prop);
 set_prop(vendor_init, vendor_logger_prop);
+set_prop(vendor_init, vendor_radio_prop);
 
 get_prop(vendor_init, vendor_radio_prop);
 get_prop(vendor_init, vendor_gps_prop);
