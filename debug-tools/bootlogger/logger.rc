@@ -4,7 +4,7 @@ service logdump /vendor/bin/logger
     oneshot
     disabled
 
-on fs
+on init
       setprop vendor.logger.init 0
 
 # Unset by init.rc
