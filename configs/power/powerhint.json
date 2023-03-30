@@ -264,6 +264,18 @@
 	    "Value": "fod_lp_mode,0"
 	},
         {
+            "PowerHint": "INTERACTIVE",
+            "Node": "CPUMaxFreq",
+            "Duration": 1000,
+            "Value": "2314000"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1976000"
+        },
+        {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
             "Node": "DoubleTapToWakeEnable",
             "Duration": 0,
