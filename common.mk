@@ -46,7 +46,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
 # Biometric Fingerprint
-ifeq ($(TARGET_HAVE_FOD),true)
+ifeq ($(TARGET_HAS_FOD),true)
 PRODUCT_PACKAGES += \
      android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611 \
      SamsungUdfpsHandler.universal9611
