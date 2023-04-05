@@ -26,14 +26,12 @@ using ::android::OK;
 const int kMaxCameraIdLen = 16;
 
 SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() {
-#if defined EXYNOS9611_MODEL_a51 || defined EXYNOS9611_MODEL_m21
    mExtraIDs.push_back(4);
    mExtraIDs.push_back(20);
    mExtraIDs.push_back(23);
    mExtraIDs.push_back(50);
    mExtraIDs.push_back(52);
    mExtraIDs.push_back(54);
-#endif
 
     if (!mInitFailed) {
         for (int i : mExtraIDs) {
@@ -103,11 +101,7 @@ Return<void> SamsungCameraProvider::notifyDeviceStateChange(hidl_bitfield<V2_5::
 // Methods from ::android::hardware::camera::provider::V2_6::ICameraProvider follow.
 Return<void> SamsungCameraProvider::getConcurrentStreamingCameraIds(
         ICameraProvider::getConcurrentStreamingCameraIds_cb _hidl_cb) {
-#if defined EXYNOS9611_MODEL_a51 || defined EXYNOS9611_MODEL_m21
     hidl_vec<hidl_vec<hidl_string>> hidl_camera_id_combinations = {{ "0", "50" }};
-#else
-    hidl_vec<hidl_vec<hidl_string>> hidl_camera_id_combinations;
-#endif
     _hidl_cb(V1_0::Status::OK, hidl_camera_id_combinations);
     return Void();
 }

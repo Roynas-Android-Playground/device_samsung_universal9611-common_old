@@ -13,29 +13,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
-soong_config_module_type {
-    name: "exynos9611_model",
-    module_type: "cc_defaults",
-    config_namespace: "exynos9611DeviceVars",
-    value_variables: ["model"],
-    properties: ["cppflags"],
-}
-
-exynos9611_model {
-    name: "exynos9611_model_defaults",
-    soong_config_variables: {
-        model: {
-            cppflags: ["-DEXYNOS9611_MODEL_%s"],
-        },
-    },
-}
-
 cc_binary {
     name: "android.hardware.camera.provider@2.6-service_64.samsung",
     defaults: [
         "hidl_defaults",
-        "exynos9611_model_defaults",
     ],
     compile_multilib: "64",
     proprietary: true,
