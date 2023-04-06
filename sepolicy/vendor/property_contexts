@@ -13,7 +13,6 @@ dev.gnss.                  u:object_r:vendor_gps_prop:s0
 # HWC
 hwc.exynos.vsync_mode      u:object_r:vendor_hwc_prop:s0
 vendor.hwc.display.        u:object_r:vendor_hwc_prop:s0
-vendor.display.            u:object_r:vendor_hwc_prop:s0
 
 # Radio
 ro.multisim.               u:object_r:radio_prop:s0
