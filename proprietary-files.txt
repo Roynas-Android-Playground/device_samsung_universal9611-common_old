@@ -22,7 +22,6 @@ vendor/lib/lib_soundaliveresampler.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.so
 vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.so
-vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libaudioeffectoffload.so
 
 ## DRM
@@ -34,12 +33,7 @@ vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 ## Firmware
-vendor/firmware/APBargeIn_AUDIO_SLSI.bin
-vendor/firmware/APBiBF_AUDIO_SLSI.bin
-vendor/firmware/AP_AUDIO_SLSI.bin
-vendor/firmware/calliope_dram.bin
 vendor/firmware/calliope_iva.bin
-vendor/firmware/calliope_sram.bin
 vendor/firmware/CC_DRAM_CODE_FLASH.bin
 vendor/firmware/CC_DTCM_CODE_FLASH.bin
 vendor/firmware/CC_ITCM_CODE_FLASH.bin
@@ -52,9 +46,7 @@ vendor/firmware/kernel_bin_inception.bin
 vendor/firmware/kernel_bin_mfb.bin
 vendor/firmware/kernel_bin_mobile_vgg.bin
 vendor/firmware/kernel_bin_nfd.bin
-vendor/firmware/param_ti.bin
 vendor/firmware/rtdsp.bin
-vendor/firmware/rtdsp_param.bin
 vendor/firmware/SoundBoosterParam.bin
 vendor/firmware/spkamp.bin
 
@@ -152,6 +144,28 @@ vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 
+## EGL
+vendor/lib/egl/libGLES_mali.so
+vendor/lib/hw/gralloc.exynos9611.so
+vendor/lib/hw/hwcomposer.exynos9611.so
+vendor/lib/libacryl.so
+vendor/lib/libacryl_plugin_slsi_hdr10.so
+vendor/lib/libdrmresource.so
+vendor/lib/libexynosdisplay.so
+vendor/lib/libexynosgraphicbuffer.so
+vendor/lib/libExynosHWCService.so
+vendor/lib/libion_exynos.so
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/hw/gralloc.exynos9611.so
+vendor/lib64/hw/hwcomposer.exynos9611.so
+vendor/lib64/libacryl.so
+vendor/lib64/libacryl_plugin_slsi_hdr10.so
+vendor/lib64/libdrmresource.so
+vendor/lib64/libexynosdisplay.so
+vendor/lib64/libexynosgraphicbuffer.so
+vendor/lib64/libExynosHWCService.so
+vendor/lib64/libion_exynos.so
+
 ## TEE non-firmware
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
@@ -188,10 +202,19 @@ vendor/etc/wifi/slsi_reg_database.bin
 ## Prebuilt libwifi-hal.so
 vendor/lib64/libwifi-hal.so|dbef589d442244aac836ff016e0295636c118497
 
-## GNSS CFG
+## GNSS
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
+# vendor/etc/init/init.gps.rc
+vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
 vendor/etc/gnss/ca.pem
 vendor/etc/gnss/gps.cfg
 vendor/etc/gnss/gps.debug.cfg
+vendor/lib/libwrappergps.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
+vendor/lib64/libwrappergps.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 # NFC
 vendor/bin/hw/nxp.android.hardware.nfc@1.1-service
