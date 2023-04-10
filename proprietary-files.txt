@@ -119,30 +119,33 @@ vendor/lib64/vendor.samsung_slsi.hardware.epic@1.0.so
 
 ## RIL
 vendor/bin/cbd
-vendor/bin/hw/rild
-vendor/etc/init/init.baseband.rc
-vendor/etc/init/init.vendor.rilcommon.rc
-vendor/etc/init/vendor.sem.rilchip.rc
-vendor/lib/libfloatingfeature.so
-vendor/lib/libsecnativefeature.so
-vendor/lib/libsecril-client.so
-vendor/lib64/libengmode_client.so
 vendor/lib64/libfloatingfeature.so
-vendor/lib64/libril_sem.so
-vendor/lib64/librilutils.so
-vendor/lib64/libsec-ril.so
 vendor/lib64/libsecnativefeature.so
 vendor/lib64/libsecril-client.so
-vendor/lib64/libSemDataProps.so
-vendor/lib64/libsemnativecarrierfeature.so
-vendor/lib64/libSemTelephonyProps.so
-vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
-vendor/lib64/vendor.samsung.hardware.radio@2.2.so
+
+## RIL - From A515FXXU5EUG5
+vendor/bin/hw/rild|2982c9628c9f8f82ff579cdb1273baed47112dfc
+vendor/etc/plmn_delta_attaio.bin|751a1c7105f1c03fc196689c2a71e2c69aa14e1f
+vendor/etc/plmn_delta_hktw.bin|97a5a4747e8c32d463d8f26254257309b8a03a63
+vendor/etc/plmn_delta_usagsm.bin|9a25ec9e9da16ed2f8a9db07f037fe08283b24e5
+vendor/etc/plmn_delta.bin|6a826cb6a8a1d460403ab2ebccf4f0d7be546ce6
+vendor/etc/plmn_se13.bin|5239d1c74574102bcaba13ecb094be67e65704b8
+vendor/etc/init/init.baseband.rc|db12805a9f48672283094d8538f2fab69bef025f
+vendor/etc/init/init.vendor.onebinary.rc|b3fab964774039b1f2f6eabf821556919b26369f
+vendor/etc/init/init.vendor.rilchip.rc|83d57882dfaefaaa21c5dd636bafd655dfaf0b10
+vendor/etc/init/init.vendor.rilcommon.rc|5a669667301c678eb825abb41531ae1e19897886
+vendor/lib64/libengmode_client.so|f4d4ec4f2c29cf3ce54a74e3c28936ab5c41ab39
+vendor/lib64/libreference-ril.so|88d198da07ea1a67245beb1da4c48da9d627ef32
+vendor/lib64/libril.so|ae21d2979f849435331f7e5c224dd1ce61615eba
+vendor/lib64/librilutils.so|c929ab09b9335b404cb6aab859d5cc20a986d2ca
+vendor/lib64/libsec-ril-dsds.so|3c7b8e57793a89ff141b08a1160482fad0940609
+vendor/lib64/libsec-ril.so|1a131c93609c7e48f835cde1fecc4a9a403c697e
+vendor/lib64/libvkmanager_vendor.so|cdfb5546e476058b1eb3695b6c21a181f9bb44bf
+vendor/lib64/libsemnativecarrierfeature.so|ca44453cf7cca968606b56936be7de0d214d74be
 
 ## EGL
 vendor/lib/egl/libGLES_mali.so
