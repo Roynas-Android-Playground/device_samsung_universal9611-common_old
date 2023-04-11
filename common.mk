@@ -197,7 +197,8 @@ endif
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
-    Tag
+    Tag \
+    init.nfc_sku.rc
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
