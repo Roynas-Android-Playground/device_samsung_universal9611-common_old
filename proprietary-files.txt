@@ -52,16 +52,9 @@ vendor/firmware/spkamp.bin
 
 ## Media config xml
 # _rc is used for M21, M31. _ti for A51
-# _rc files from M315FXXU3CVH1
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/etc/mixer_gains.xml
-vendor/etc/mixer_gains_ti.xml
-vendor/etc/mixer_gains_rc.xml
-vendor/etc/mixer_paths.xml
-vendor/etc/mixer_paths_ti.xml
-vendor/etc/mixer_paths_rc.xml
 vendor/etc/mixer_usb_gray.xml
 vendor/etc/mixer_usb_white.xml
 
