@@ -219,11 +219,9 @@ vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
 vendor/lib64/libwrappergps.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
+# SLSI NFC firmware - from M315FXXU3CVH1
+vendor/firmware/nfc/sec_s3nrn82_firmware.bin
+vendor/etc/nfc/sec_s3nrn82_rfreg.bin
+
 # NFC
-vendor/bin/hw/nxp.android.hardware.nfc@1.1-service
-vendor/etc/init/nxp.android.hardware.nfc@1.1-service.rc
 vendor/etc/init/init.nfc.samsung.rc
-vendor/lib64/nfc_nci_nxp.so
-vendor/lib64/vendor.nxp.nxpnfc@1.0.so
-vendor/lib64/vendor.nxp.nxpnfc@1.1.so
-vendor/firmware/nfc/libpn553_fw.so

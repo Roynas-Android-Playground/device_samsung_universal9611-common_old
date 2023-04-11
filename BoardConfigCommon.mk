@@ -105,12 +105,17 @@ TARGET_KEYMASTER_VARIANT := samsung
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_SKUS := hce hceese hcesim hcesimese disabled
-ODM_MANIFEST_NFC_FILE := $(COMMON_PATH)/configs/nfc/odm_nfc_manifest.xml
+ifeq ($(TARGET_USES_NXP_NFC),true)
+PREFIX := nxp
+else
+PREFIX := slsi
+endif
+ODM_MANIFEST_NFC_FILE := $(COMMON_PATH)/configs/nfc/odm_nfc_manifest_$(PREFIX).xml
 ODM_MANIFEST_HCE_FILES := $(ODM_MANIFEST_NFC_FILE)
 ODM_MANIFEST_HCEESE_FILES := $(ODM_MANIFEST_NFC_FILE)
 ODM_MANIFEST_HCESIM_FILES := $(ODM_MANIFEST_NFC_FILE)
 ODM_MANIFEST_HCESIMESE_FILES := $(ODM_MANIFEST_NFC_FILE)
-ODM_MANIFEST_DISABLED_FILES := $(COMMON_PATH)/configs/nfc/odm_nfc_manifest_disabled.xml
+ODM_MANIFEST_DISABLED_FILES := $(COMMON_PATH)/configs/nfc/odm_nfc_manifest_disabled_$(PREFIX).xml
 
 ## Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
