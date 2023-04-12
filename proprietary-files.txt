@@ -112,6 +112,7 @@ vendor/lib64/vendor.samsung_slsi.hardware.epic@1.0.so
 
 ## RIL
 vendor/bin/cbd
+vendor/lib/libsecril-client.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecnativefeature.so
 vendor/lib64/libsecril-client.so
