@@ -315,10 +315,6 @@
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
 
-    <!-- If true, the screen can be rotated via the accelerometer in all 4
-         rotations as the default behavior. -->
-    <bool name="config_allowAllRotations">true</bool>
-    
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
