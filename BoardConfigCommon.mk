@@ -153,7 +153,7 @@ VENDOR_SECURITY_PATCH := 2022-10-01
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor $(COMMON_PATH)/sepolicy/vendor-ext
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor $(COMMON_PATH)/debug-tools/sepolicy
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 ## Wi-Fi
