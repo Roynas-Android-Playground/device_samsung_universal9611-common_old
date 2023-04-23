@@ -14,3 +14,7 @@ allow gpsd gpsd_exec:file execute_no_trans;
 get_prop(gpsd, bootanim_system_prop);
 
 allow gpsd system_data_file:dir search;
+
+binder_call(gpsd, servicemanager)
+allow gpsd hal_system_suspend_service:service_manager find;
+binder_call(gpsd, hal_system_suspend_service)
