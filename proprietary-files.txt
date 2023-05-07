@@ -2,7 +2,6 @@
 
 ## Audio
 vendor/bin/main_abox
-vendor/etc/dolby/dax-default.xml
 vendor/lib/hw/audio.primary.exynos9611.so
 vendor/lib/libalsautils_sec.so
 vendor/lib/libaudio-ril.so
