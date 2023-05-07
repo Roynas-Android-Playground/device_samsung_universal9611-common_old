@@ -14,9 +14,10 @@ TimedRestore::~TimedRestore(void) {
 	ofs << saved_value;
 }
 
-void TimedRestore::set(const std::string& content)
+void TimedRestore::set(const int content)
 {
 	std::ofstream ofs(filename);
+	if (saved_value > content) return;
 	if (ofs.fail()) return;
 	ofs << content;
 }

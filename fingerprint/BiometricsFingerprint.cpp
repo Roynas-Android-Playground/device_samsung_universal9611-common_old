@@ -122,7 +122,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
     std::thread([]() {
         std::this_thread::sleep_for(std::chrono::milliseconds(35));
 	BrightnessRestore = std::make_shared<TimedRestore>(B_PATH);
-	BrightnessRestore->set("331");
+	BrightnessRestore->set(331);
     }).detach();
 
     request(SEM_REQUEST_TOUCH_EVENT, FINGERPRINT_REQUEST_SESSION_OPEN);
