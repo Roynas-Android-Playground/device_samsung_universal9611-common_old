@@ -192,14 +192,15 @@ PRODUCT_PACKAGES += \
 ifeq ($(TARGET_USES_NXP_NFC),true)
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/libnfc-nxp_RF.conf
+    $(COMMON_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/libnfc-nxp_RF.conf \
+    $(COMMON_PATH)/configs/nfc/libnfc-nci_nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
-    nfc_nci_nxp
+    android.hardware.nfc@1.2-service
 else
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
+    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
+    $(COMMON_PATH)/configs/nfc/libnfc-nci_slsi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.samsung
