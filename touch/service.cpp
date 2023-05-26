@@ -44,13 +44,10 @@ int main() {
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (touchscreenGesture->isSupported()) {
-        status = touchscreenGesture->registerAsService();
-        if (status != OK) {
-            LOG(ERROR) << "Could not register service for Touch HAL TouchscreenGesture Iface ("
-                       << status << ")";
-            goto shutdown;
-        }
+    status = touchscreenGesture->registerAsService();
+    if (status != OK) {
+	LOG(ERROR) << "Could not register service for Touch HAL TouchscreenGesture Iface (" << status << ")";
+        goto shutdown;
     }
 
     LOG(INFO) << "Touch HAL service is ready.";
