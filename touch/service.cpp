@@ -44,6 +44,8 @@ int main() {
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
+    CHECK(touchscreenGesture->isSupported());
+
     status = touchscreenGesture->registerAsService();
     if (status != OK) {
 	LOG(ERROR) << "Could not register service for Touch HAL TouchscreenGesture Iface (" << status << ")";
