@@ -462,6 +462,13 @@ on fs
     wait /dev/block/platform/13520000.ufs/by-name/sec_efs
     mount ext4 /dev/block/platform/13520000.ufs/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
 
+    # Mount OMR as log storage
+    wait /dev/block/platform/13520000.ufs/by-name/omr
+    mount ext4 /dev/block/platform/13520000.ufs/by-name/omr /logs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
+    setprop vendor.logger.log_storage "/logs"
+    setprop vendor.logger.init 1
+
+    restorecon_recursive /logs
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
     restorecon_recursive /mnt/vendor/persist
