@@ -52,6 +52,7 @@ genfscon sysfs /devices/virtual/sec/tsp/fod_pressed							       u:object_r:sysf
 genfscon sysfs /devices/platform/dc_vibrator/leds/vibrator/						       u:object_r:sysfs_leds_writable:s0
 
 genfscon sysfs /module/cpuidle/parameters/		u:object_r:sysfs_cpuidle_writable:s0
+genfscon sysfs /devices/virtual/input/			u:object_r:sysfs_input_writable:s0
 
 # Sensors
 genfscon sysfs /devices/virtual/sec/hall_ic								       u:object_r:sysfs_sensors_writable:s0
