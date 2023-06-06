@@ -70,6 +70,9 @@ function blob_fixup() {
 	    "${PATCHELF}" --add-needed libshim_audioparams.so "${2}"
 	    sed -i 's|str_parms_get_str|str_parms_get_mod|g' "${2}"
 	    ;;
+	vendor/lib/libwvhidl.so)
+	    "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v32.so "${2}"
+	    ;;
     esac
 }
 
