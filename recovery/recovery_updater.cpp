@@ -36,8 +36,8 @@ Value *VerifyBootloader(const char *name, State *state,
   int min_supported_bootloader = int(min_supported_bootloader_arg[0]);
 
   int version = 0;
-  if (!bootloader.empty() && bootloader[0] == 'M') {
-	// M-series don't need assertions
+  if (!bootloader.empty() && bootloader[0] != 'A') {
+	// Other phones than A51 don't need assertions
 	ret = 1;
 	goto result;
   }
