@@ -52,6 +52,11 @@ ro.config.vc_call_vol_steps=10
 # If not set or set to 0, OMX will only use BT.601 colorspace.
 ro.vendor.cscsupported=1
 
+## Vibrator HAL
+ro.vendor.vibrator_hal.click_duration=50
+ro.vendor.vibrator_hal.tick_duration=45
+ro.vendor.vibrator_hal.texture_tick_duration=30
+
 ## CSC
 ro.csc.country_code=Romania
 ro.csc.countryiso_code=RO
