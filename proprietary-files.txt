@@ -62,51 +62,18 @@ vendor/bin/hw/vendor.samsung_slsi.hardware.epic@1.0-service
 vendor/etc/init/vendor.samsung_slsi.hardware.epic@1.0-service.rc
 vendor/lib/libcodecsolutionhelper_vendor.so
 vendor/lib/libepicoperator.so
-vendor/lib/libExynosOMX_Core.so
-vendor/lib/libExynosOMX_Resourcemanager.so
-vendor/lib/libexynosscaler.so
-vendor/lib/libexynosutils.so
-vendor/lib/libexynosv4l2.so
 vendor/lib/libFrucSSMLib.so
 vendor/lib/libpredeflicker_native.so
-vendor/lib/libstagefrighthw.so
 vendor/lib/libstagefright_bufferqueue_helper_vendor.so
 vendor/lib/libstagefright_omx_vendor.so
-vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
-vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
 vendor/lib/vendor.samsung_slsi.hardware.epic@1.0.so
 vendor/lib/vintf-codecsolution-V2-ndk.so
 vendor/lib/hw/vendor.samsung_slsi.hardware.epic@1.0-impl.so
 vendor/lib/vndk/libstagefright_omx_utils.so
 vendor/lib/vndk/libstagefright_xmlparser.so
 vendor/lib64/libepicoperator.so
-vendor/lib64/libExynosOMX_Core.so
-vendor/lib64/libExynosOMX_Resourcemanager.so
-vendor/lib64/libexynosscaler.so
-vendor/lib64/libexynosutils.so
-vendor/lib64/libexynosv4l2.so
 vendor/lib64/libstagefright_foundation_vendor.so
 vendor/lib64/hw/vendor.samsung_slsi.hardware.epic@1.0-impl.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 vendor/lib64/vendor.samsung_slsi.hardware.epic@1.0.so
 
 ## RIL
@@ -142,25 +109,7 @@ vendor/lib64/libsemnativecarrierfeature.so|ca44453cf7cca968606b56936be7de0d214d7
 
 ## EGL
 vendor/lib/egl/libGLES_mali.so
-vendor/lib/hw/gralloc.exynos9611.so
-vendor/lib/hw/hwcomposer.exynos9611.so
-vendor/lib/libacryl.so
-vendor/lib/libacryl_plugin_slsi_hdr10.so
-vendor/lib/libdrmresource.so
-vendor/lib/libexynosdisplay.so
-vendor/lib/libexynosgraphicbuffer.so
-vendor/lib/libExynosHWCService.so
-vendor/lib/libion_exynos.so
 vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/hw/gralloc.exynos9611.so
-vendor/lib64/hw/hwcomposer.exynos9611.so
-vendor/lib64/libacryl.so
-vendor/lib64/libacryl_plugin_slsi_hdr10.so
-vendor/lib64/libdrmresource.so
-vendor/lib64/libexynosdisplay.so
-vendor/lib64/libexynosgraphicbuffer.so
-vendor/lib64/libExynosHWCService.so
-vendor/lib64/libion_exynos.so
 
 ## TEE non-firmware
 vendor/bin/tzdaemon

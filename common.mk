@@ -71,7 +71,8 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6-service_64.samsung \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libhwjpeg
 
 # Apeture
 TARGET_BUILD_APERTURE_CAMERA := true
@@ -100,14 +101,17 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1
+
+PRODUCT_PACKAGES += \
+    android.hardware.composer.hwc3-service.slsi \
+    gralloc.exynos9611 \
+    libion
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor \
-    libdrm.vendor
+    android.hardware.drm@1.3.vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcrypto-v32.so
@@ -193,6 +197,23 @@ PRODUCT_COPY_FILES += \
 # Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.samsung-mali
+
+# OMX
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libExynosOMX_Core \
+    libExynosOMX_Resourcemanager \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.AVC.Encoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.HEVC.Encoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.VP8.Encoder \
+    libOMX.Exynos.VP9.Decoder \
+    libOMX.Exynos.VP9.Encoder \
+    libOMX.Exynos.WMV.Decoder
 
 # NFC
 ifeq ($(TARGET_USES_NXP_NFC),true)
