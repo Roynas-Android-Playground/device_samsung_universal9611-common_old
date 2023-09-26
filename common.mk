@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6-service_64.samsung \
     libsensorndkbridge
 
+# Apeture
+TARGET_BUILD_APERTURE_CAMERA := true
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
