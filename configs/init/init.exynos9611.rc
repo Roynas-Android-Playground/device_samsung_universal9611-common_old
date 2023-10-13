@@ -804,6 +804,7 @@ service fuse_usb2 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb2 /stor
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /system/bin/watchdogd 10 20
+     user root
      class core
      oneshot
      seclabel u:r:watchdogd:s0
