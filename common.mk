@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
 
 # Debug utils
-$(call inherit-product, $(COMMON_PATH)/debug-tools/debug.mk)
+$(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
