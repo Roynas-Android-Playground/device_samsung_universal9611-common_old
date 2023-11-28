@@ -87,6 +87,11 @@ BOARD_CUSTOM_DTBIMG_MK := $(COMMON_PATH)/mkdtbimg.mk
 # Fingerprint
 TARGET_SEC_FP_REQUEST_FORCE_CALIBRATE := true
 
+# Camera
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
+SOONG_CONFIG_samsungCameraVars_extra_ids := 4,20,23,50,52,54
+
 # FOD
 TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.universal9611
 
