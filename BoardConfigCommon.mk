@@ -105,8 +105,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-l
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
-TARGET_KEYMASTER_ADDITIONAL_SHARED_LIBS := \
-    libcrypto-samsung_ext
 
 ## Manifest
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
