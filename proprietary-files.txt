@@ -161,10 +161,6 @@ vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
 vendor/lib64/libwrappergps.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
-## libcrypto - built from external/boringssl@42125132 with changes done to asn1t.h in 9211b80 reverted
--vendor/lib64/libcrypto-compat.so|c62caa1fb25df46cc343376fdb03ced8607f6cda
-
-
 # SLSI NFC firmware - from M315FXXU3CVH1
 vendor/firmware/nfc/sec_s3nrn82_firmware.bin
 vendor/etc/nfc/sec_s3nrn82_rfreg.bin
