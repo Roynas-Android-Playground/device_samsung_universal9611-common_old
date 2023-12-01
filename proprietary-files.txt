@@ -57,25 +57,6 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/mixer_usb_gray.xml
 vendor/etc/mixer_usb_white.xml
 
-## OMX
-vendor/bin/hw/vendor.samsung_slsi.hardware.epic@1.0-service
-vendor/etc/init/vendor.samsung_slsi.hardware.epic@1.0-service.rc
-vendor/lib/libcodecsolutionhelper_vendor.so
-vendor/lib/libepicoperator.so
-vendor/lib/libFrucSSMLib.so
-vendor/lib/libpredeflicker_native.so
-vendor/lib/libstagefright_bufferqueue_helper_vendor.so
-vendor/lib/libstagefright_omx_vendor.so
-vendor/lib/vendor.samsung_slsi.hardware.epic@1.0.so
-vendor/lib/vintf-codecsolution-V2-ndk.so
-vendor/lib/hw/vendor.samsung_slsi.hardware.epic@1.0-impl.so
-vendor/lib/vndk/libstagefright_omx_utils.so
-vendor/lib/vndk/libstagefright_xmlparser.so
-vendor/lib64/libepicoperator.so
-vendor/lib64/libstagefright_foundation_vendor.so
-vendor/lib64/hw/vendor.samsung_slsi.hardware.epic@1.0-impl.so
-vendor/lib64/vendor.samsung_slsi.hardware.epic@1.0.so
-
 ## RIL
 vendor/bin/cbd
 vendor/lib/libsecril-client.so

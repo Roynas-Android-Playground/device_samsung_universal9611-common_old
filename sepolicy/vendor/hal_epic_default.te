@@ -1,8 +1,0 @@
-type hal_epic_default, domain;
-type hal_epic_default_exec, exec_type, vendor_file_type, file_type;
-init_daemon_domain(hal_epic_default)
-
-vndbinder_use(hal_epic_default)
-add_hwservice(hal_epic_default, hal_epic_hwservice)
-hwbinder_use(hal_epic_default)
-get_prop(hal_epic_default, hwservicemanager_prop)
