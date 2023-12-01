@@ -12,6 +12,11 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_ODM := odm
 
+ifneq ($(wildcard vendor/gms),)
+$(warning Assuming WITH_GMS is true)
+WITH_GMS ?= true
+endif
+
 # Reserved sizes
 ifneq ($(WITH_GMS),true)
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 3221225472 # 3GB
